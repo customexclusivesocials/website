@@ -1,61 +1,237 @@
+/* ==========================================
+   1. DESIGN SYSTEM & RESET
+   ========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0a0a0a;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    letter-spacing: -0.03em;
+}
+
+/* ==========================================
+   2. HERO SECTION
+   ========================================== */
 .hero {
-  min-height: 100vh;
-  background: #f8f8f8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 60px 20px;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 24px;
+    background: radial-gradient(circle at top right, #141414 0%, #0a0a0a 100%);
+    position: relative;
 }
 
 .hero-content {
-  max-width: 900px;
+    max-width: 850px;
+    text-align: center;
 }
 
 .agency-tag {
-  display: inline-block;
-  padding: 10px 18px;
-  border: 1px solid #ddd;
-  border-radius: 50px;
-  margin-bottom: 20px;
-  font-size: 14px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #a3a3a3;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    border: 1px solid #262626;
+    padding: 6px 16px;
+    border-radius: 100px;
+    background: #121212;
 }
 
 .hero h1 {
-  font-size: 4rem;
-  line-height: 1.1;
-  color: #111;
-  margin-bottom: 20px;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(180deg, #ffffff 0%, #a3a3a3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .hero p {
-  font-size: 1.2rem;
-  color: #666;
-  max-width: 700px;
-  margin: 0 auto 30px;
+    font-size: 1.2rem;
+    color: #a3a3a3;
+    max-width: 650px;
+    margin: 0 auto 2.5rem auto;
+    font-weight: 300;
 }
 
 .hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Buttons */
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 .btn-primary {
-  background: #111;
-  color: white;
-  padding: 16px 28px;
-  text-decoration: none;
-  border-radius: 100px;
+    background-color: #ffffff;
+    color: #0a0a0a;
+}
+
+.btn-primary:hover {
+    background-color: #e5e5e5;
+    transform: translateY(-2px);
 }
 
 .btn-secondary {
-  border: 1px solid #111;
-  color: #111;
-  padding: 16px 28px;
-  text-decoration: none;
-  border-radius: 100px;
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #262626;
+}
+
+.btn-secondary:hover {
+    background-color: #121212;
+    border-color: #404040;
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   3. SERVICES SECTION
+   ========================================== */
+.services {
+    padding: 100px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.card {
+    background: #121212;
+    border: 1px solid #1f1f1f;
+    padding: 40px 30px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border-color: #404040;
+    transform: translateY(-4px);
+    background: #161616;
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+}
+
+.card p {
+    color: #737373;
+    font-size: 0.95rem;
+    font-weight: 300;
+}
+
+/* ==========================================
+   4. PORTFOLIO SECTION
+   ========================================== */
+#portfolio {
+    padding: 100px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 1px solid #1f1f1f;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px;
+}
+
+.project {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #121212;
+    border: 1px solid #1f1f1f;
+    transition: all 0.3s ease;
+}
+
+.project img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    opacity: 0.8;
+    transition: all 0.5s ease;
+    filter: grayscale(20%);
+}
+
+.project h3 {
+    padding: 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    background: #121212;
+    border-top: 1px solid #1f1f1f;
+}
+
+.project:hover {
+    border-color: #404040;
+    transform: translateY(-4px);
+}
+
+.project:hover img {
+    opacity: 1;
+    transform: scale(1.03);
+    filter: grayscale(0%);
+}
+
+/* ==========================================
+   5. RESPONSIVE DESIGN (MOBILE OPTIMIZATION)
+   ========================================== */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1.05rem;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+    h2 {
+        font-size: 2rem;
+    }
 }
