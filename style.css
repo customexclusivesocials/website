@@ -235,3 +235,36 @@ h2 {
         font-size: 2rem;
     }
 }
+/* ==========================================
+   6. CONTACT SECTION STYLES
+   ========================================== */
+.contact {
+    padding: 100px 24px;
+    text-align: center;
+    background: #0d0d0d;
+    border-top: 1px solid #1f1f1f;
+}
+
+.contact p {
+    color: #a3a3a3;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+
+.email-link {
+    font-size: 1.6rem;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid #262626;
+    padding-bottom: 4px;
+    display: inline-block;
+}
+
+.email-link:hover {
+    color: #a3a3a3;
+    border-color: #ffffff;
+    transform: translateY(-2px);
+}
