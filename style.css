@@ -503,3 +503,163 @@ h2 {
         padding: 32px 20px;
     }
 }
+/* ==========================================================================
+   PORTFOLIO LANDSCAPE BANNER GRID STYLES
+   ========================================================================== */
+.portfolio-section {
+    padding: 100px 24px;
+    max-width: 1300px;
+    margin: 0 auto;
+    background-color: #050505;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.section-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #a3a3a3;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -0.03em;
+}
+
+.section-header p {
+    color: #737373;
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+/* Landscape Oriented Grid Layout */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 48px;
+}
+
+.portfolio-item {
+    display: flex;
+    flex-direction: column;
+    background: #0d0d0d;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #1a1a1a;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+
+/* Forces images to maintain full banner scaling proportions */
+.image-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Ensures no wide banner elements or text get aggressively cropped */
+    overflow: hidden;
+    background: #121212;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Premium Reveal Overlay */
+.item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(5, 5, 5, 0.65);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.view-btn {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #050505;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 6px;
+    transform: translateY(12px);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Interactive Hover States */
+.portfolio-item:hover {
+    transform: translateY(-4px);
+    border-color: #2e2e2e;
+}
+
+.portfolio-item:hover .image-container img {
+    transform: scale(1.02);
+}
+
+.portfolio-item:hover .item-overlay {
+    opacity: 1;
+}
+
+.portfolio-item:hover .view-btn {
+    transform: translateY(0);
+}
+
+/* Typography Details Below Image */
+.item-details {
+    padding: 24px;
+    border-top: 1px solid #1a1a1a;
+}
+
+.item-category {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #737373;
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.item-details h3 {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+    line-height: 1.4;
+}
+
+/* Smart Mobile Adjustments */
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    .item-details {
+        padding: 20px;
+    }
+}
