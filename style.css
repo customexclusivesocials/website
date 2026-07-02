@@ -663,3 +663,143 @@ h2 {
         padding: 20px;
     }
 }
+/* ==========================================
+   SERVICES & AUTOMATION SECTION STYLES
+   ========================================== */
+.services-section {
+    padding: 120px 5%;
+    background-color: #050505;
+    border-top: 1px solid #141414;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: #0a0a0a;
+    border: 1px solid #161616;
+    border-radius: 16px;
+    padding: 40px 35px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Feature the larger project automation card dynamically */
+.high-impact-card {
+    grid-column: span 1;
+}
+
+@media (min-width: 1024px) {
+    .services-grid > :nth-last-child(1):nth-child(odd) {
+        grid-column: span 2;
+        max-width: 100%;
+    }
+}
+
+.card-badge {
+    align-self: flex-start;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #a3a3a3;
+    background: #121212;
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 24px;
+    border: 1px solid #1f1f1f;
+}
+
+.premium-badge {
+    border-color: #333;
+    color: #ffffff;
+}
+
+.service-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 28px;
+    letter-spacing: -0.01em;
+}
+
+/* Minimalist Workflow Numbered List Styling */
+.workflow-list {
+    list-style: none;
+    counter-reset: workflow-counter;
+    padding: 0;
+    margin: 0 0 35px 0;
+    flex-grow: 1;
+}
+
+.workflow-list li {
+    counter-increment: workflow-counter;
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 18px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #a3a3a3;
+    font-weight: 300;
+}
+
+.workflow-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* Custom numbers design */
+.workflow-list li::before {
+    content: "0" counter(workflow-counter);
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 0.75rem;
+    font-family: monospace;
+    font-weight: 600;
+    color: #525252;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+/* Value Box Design Element */
+.service-value-box {
+    margin-top: auto;
+    padding-top: 24px;
+    border-top: 1px solid #141414;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #737373;
+}
+
+.service-value-box strong {
+    color: #e5e5e5;
+    font-weight: 500;
+}
+
+/* Hover States for Cards */
+.service-card:hover {
+    transform: translateY(-4px);
+    border-color: #262626;
+    background-color: #0c0c0c;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.service-card:hover .workflow-list li::before {
+    color: #ffffff;
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+    .services-section {
+        padding: 80px 24px;
+    }
+    .service-card {
+        padding: 32px 24px;
+    }
+}
