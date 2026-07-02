@@ -1262,3 +1262,41 @@ h2 {
     .card-preview-window {
         height: 180px;
     }
+/* ==========================================
+   WORKFLOW GRAPHIC IMAGE SHOWCASE
+   ========================================== */
+.workflow-graphic-section {
+    padding: 80px 5%;
+    background-color: #050505; /* Seamless dark match */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.graphic-canvas-container {
+    max-width: 1150px; /* Prevents graphic from over-stretching on 4K screens */
+    width: 100%;
+    border: 1px solid #141414; /* Muted modern frame edge */
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
+    background-color: #0a0a0a;
+}
+
+.workflow-display-asset {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain; /* Enforces perfect original dimensions */
+}
+
+/* Fluid Adaptation for Mobile Screens */
+@media (max-width: 768px) {
+    .workflow-graphic-section {
+        padding: 40px 16px;
+    }
+    .graphic-canvas-container {
+        border-radius: 14px; /* Slightly softer curve on smaller hardware profiles */
+    }
+}
