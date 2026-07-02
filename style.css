@@ -1052,3 +1052,214 @@ h2 {
     margin: 0 auto;
     position: relative;
 }
+/* ==========================================
+   PORTFOLIO ARCHITECTURE OVERHAUL
+   ========================================== */
+.portfolio-interactive-section {
+    padding: 120px 5%;
+    background: #050505;
+    border-top: 1px solid #121212;
+}
+
+.section-header-minimal {
+    max-width: 1300px;
+    margin: 0 auto 50px auto;
+}
+
+.section-header-minimal h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+    margin-top: 10px;
+}
+
+.portfolio-grid-interactive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+    gap: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Base Link Card Styling */
+.portfolio-link-card {
+    background: #0a0a0a;
+    border: 1px solid #161616;
+    border-radius: 20px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Keeps image corners rounded */
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Visual Showcase Window inside the card */
+.card-preview-window {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    background: #111;
+    overflow: hidden;
+    border-bottom: 1px solid #141414;
+}
+
+.preview-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(20%) brightness(85%);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+}
+
+.brand-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: screen;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* Card Body Formatting */
+.card-body-content {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-header-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.project-tag {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #666;
+    font-weight: 500;
+}
+
+.status-indicator {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #a3a3a3;
+    background: #141414;
+    padding: 4px 12px;
+    border-radius: 100px;
+    border: 1px solid #222;
+}
+
+.client-name {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.01em;
+}
+
+.client-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #888;
+    font-weight: 300;
+    margin: 0 0 35px 0;
+    flex-grow: 1;
+}
+
+.card-footer-action {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff;
+    font-weight: 500;
+    padding-top: 24px;
+    border-top: 1px solid #141414;
+}
+
+.link-arrow {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+/* ==========================================
+   INDIVIDUAL BRAND HOVER EFFECTS (ANTI-BLAND)
+   ========================================== */
+
+/* General Hover Elevation */
+.portfolio-link-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.7);
+}
+
+.portfolio-link-card:hover .preview-img {
+    transform: scale(1.03);
+    filter: grayscale(0%) brightness(95%);
+}
+
+.portfolio-link-card:hover .link-arrow {
+    transform: translateX(6px);
+}
+
+/* SQIN MED: Elegant Deep Red/Burgundy Accents */
+.brand-sqin:hover {
+    border-color: #4a1515;
+}
+.brand-sqin .brand-overlay {
+    background: linear-gradient(to bottom, rgba(139, 0, 0, 0.15), transparent);
+}
+
+/* SHOP SQIN: Rich Gold/Amber Clean Hue */
+.brand-shopsqin:hover {
+    border-color: #5c4326;
+}
+.brand-shopsqin .brand-overlay {
+    background: linear-gradient(to bottom, rgba(212, 175, 55, 0.1), transparent);
+}
+
+/* MADEUP: Sophisticated Matte Nude/Blush Tone */
+.brand-madeup:hover {
+    border-color: #5e4a43;
+}
+.brand-madeup .brand-overlay {
+    background: linear-gradient(to bottom, rgba(230, 204, 196, 0.08), transparent);
+}
+
+/* BLOOM LIGHTHOUSE: Slate / Deep Coast Monochrome Mirror */
+.brand-bloom:hover {
+    border-color: #2c3e50;
+}
+.brand-bloom .brand-overlay {
+    background: linear-gradient(to bottom, rgba(52, 152, 219, 0.08), transparent);
+}
+
+/* Responsive Grid Snapping */
+@media (max-width: 1200px) {
+    .portfolio-grid-interactive {
+        grid-template-columns: 1fr;
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-body-content {
+        padding: 30px 24px;
+    }
+    .client-name {
+        font-size: 1.3rem;
+    }
+    .card-preview-window {
+        height: 180px;
+    }
+}
