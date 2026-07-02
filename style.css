@@ -903,3 +903,133 @@ h2 {
         line-height: 1.65;
     }
 }
+/* ==========================================
+   TEXT-DRIVEN LIVE PORTFOLIO GRID
+   ========================================== */
+.portfolio-interactive-section {
+    padding: 100px 5%;
+    background: #060606; /* Rich luxury off-black */
+    border-top: 1px solid #121212;
+}
+
+.portfolio-grid-interactive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Entire card acts as a clean, premium button link */
+.portfolio-link-card {
+    background: #0c0c0c;
+    border: 1px solid #161616;
+    border-radius: 14px;
+    padding: 45px 40px;
+    text-decoration: none; /* Removes default link underline */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 280px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-header-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.project-tag {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #666666;
+    font-weight: 500;
+}
+
+.status-indicator {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #a3a3a3;
+    background: #141414;
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid #222;
+}
+
+.client-name {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 0 0 14px 0;
+    letter-spacing: -0.01em;
+}
+
+.client-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #8a8a8a;
+    font-weight: 300;
+    margin: 0 0 40px 0;
+    flex-grow: 1;
+}
+
+.card-footer-action {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff;
+    font-weight: 500;
+    padding-top: 20px;
+    border-top: 1px solid #141414;
+}
+
+.link-arrow {
+    font-size: 1.1rem;
+    line-height: 1;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* HIGH-END INTERACTIVE HOVER STATES */
+.portfolio-link-card:hover {
+    background: #111111;
+    border-color: #333333;
+    transform: translateY(-4px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+}
+
+.portfolio-link-card:hover .client-name {
+    color: #ffffff;
+}
+
+.portfolio-link-card:hover .link-arrow {
+    transform: translateX(6px); /* Elite physical feedback animation */
+}
+
+.portfolio-link-card:hover .project-tag {
+    color: #a3a3a3;
+}
+
+/* Mobile & Tablet Adaptation */
+@media (max-width: 992px) {
+    .portfolio-grid-interactive {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .portfolio-link-card {
+        padding: 35px 24px;
+        min-height: auto;
+    }
+    .client-name {
+        font-size: 1.35rem;
+    }
+}
