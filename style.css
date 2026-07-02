@@ -1033,3 +1033,22 @@ h2 {
         font-size: 1.35rem;
     }
 }
+/* FORCE SECTIONS TO BE SEGREGATED IN VERTICAL FLOW */
+.portfolio-interactive-section,
+.why-ces-section {
+    display: block !important;
+    width: 100% !important;
+    position: relative !important;
+    float: none !important;
+    clear: both !important;
+}
+
+/* Ensure the portfolio grid doesn't leak its child elements */
+.portfolio-grid-interactive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+}
