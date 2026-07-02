@@ -803,3 +803,103 @@ h2 {
         padding: 32px 24px;
     }
 }
+/* ==========================================
+   LOCAL REGIONAL INTRO SECTION STYLES
+   ========================================== */
+.local-intro-section {
+    padding: 140px 5% 40px 5%;
+    background-color: #050505; /* Seamless transition to dark canvas */
+    border-top: 1px solid #141414;
+}
+
+.local-intro-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: 1300px;
+    margin: 0 auto;
+    border-bottom: 1px solid #161616;
+    padding-bottom: 60px;
+    gap: 80px;
+}
+
+.local-intro-content {
+    max-width: 820px;
+}
+
+.local-intro-content h2 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+    margin-top: 14px;
+    margin-bottom: 28px;
+    line-height: 1.25;
+}
+
+.local-intro-content .lead-text {
+    font-size: 1.2rem;
+    line-height: 1.75;
+    color: #a3a3a3;
+    font-weight: 300;
+}
+
+/* Minimalist location tag on the right side */
+.local-intro-accent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    min-width: 180px;
+    padding-bottom: 10px;
+}
+
+.accent-line {
+    width: 32px;
+    height: 1px;
+    background-color: #404040;
+    margin-bottom: 14px;
+    transition: width 0.4s ease;
+}
+
+.accent-location {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #525252;
+    font-family: monospace;
+}
+
+/* Elegant visual feedback when interacting near the section */
+.local-intro-section:hover .accent-line {
+    width: 60px;
+    background-color: #ffffff;
+}
+
+/* Responsive Scaling for Tablets and Mobile Screens */
+@media (max-width: 992px) {
+    .local-intro-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+        padding-bottom: 45px;
+    }
+    
+    .local-intro-accent {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .local-intro-section {
+        padding: 90px 24px 20px 24px;
+    }
+    
+    .local-intro-content h2 {
+        font-size: 1.85rem;
+    }
+    
+    .local-intro-content .lead-text {
+        font-size: 1.05rem;
+        line-height: 1.65;
+    }
+}
