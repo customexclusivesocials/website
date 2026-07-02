@@ -1262,24 +1262,3 @@ h2 {
     .card-preview-window {
         height: 180px;
     }
-   <!-- AGENCY PORTFOLIO CARD: CUSTOM EXCLUSIVE SOCIALS -->
-<a href="https://customesocials.ca/" class="portfolio-link-card brand-ces">
-    <div class="card-preview-window">
-        <!-- Tip: Use a sleek snapshot of your hero section or your main logo asset -->
-        <img src="ces-preview.jpg" alt="Custom Exclusive Socials Platform Preview" class="preview-img">
-        <div class="brand-overlay"></div>
-    </div>
-    <div class="card-body-content">
-        <div class="card-header-meta">
-            <span class="project-tag">Agency Hub & Automation</span>
-            <span class="status-indicator">Live Engine</span>
-        </div>
-        <h3 class="client-name">Custom Exclusive Socials</h3>
-        <p class="client-description">Our core operational flagship. A luxury digital design engine built to manage automated client onboarding pipelines, premium web infrastructure, and high-conversion regional brand strategies.</p>
-        <div class="card-footer-action">
-            <span>Explore Our Infrastructure</span>
-            <span class="link-arrow">→</span>
-        </div>
-    </div>
-</a>
-}
