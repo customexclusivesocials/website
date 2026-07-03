@@ -1189,3 +1189,216 @@ p {
         font-size: 30px;
     }
 }
+/* ==========================================================================
+   ADVANCED SYSTEMS ENGINE STYLING
+   ========================================================================== */
+.systems-engine-section {
+    background-color: #050505;
+    padding: 100px 0;
+    width: 100%;
+    color: #ffffff;
+}
+
+.systems-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Section Header Typography */
+.systems-main-header {
+    margin-bottom: 60px;
+    text-align: left;
+}
+
+.systems-badge {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #6366f1; /* Tech Indigo accent tint */
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.systems-main-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    color: #ffffff;
+}
+
+.systems-main-header p {
+    font-size: 1.1rem;
+    color: #8a8a93;
+    max-width: 600px;
+    font-weight: 300;
+}
+
+/* Grid Layout Matrix */
+.systems-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* Premium System Card Structure */
+.system-card {
+    background: #0c0c12;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.system-card:hover {
+    border-color: rgba(99, 102, 241, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.full-width-card {
+    grid-column: span 2;
+}
+
+/* Card Meta Indicators */
+.card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.category-tag {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #a1a1aa;
+    font-weight: 500;
+}
+
+.system-status {
+    font-size: 0.65rem;
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+    padding: 4px 10px;
+    border-radius: 100px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.system-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+}
+
+/* Step-by-Step Functional Timeline */
+.step-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.step-item {
+    font-size: 0.95rem;
+    color: #d4d4d8;
+    position: relative;
+    padding-left: 28px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+/* Clean Technical Ordered Layout Counters */
+.step-timeline {
+    counter-reset: step-counter;
+}
+
+.step-item::before {
+    counter-increment: step-counter;
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 18px;
+    height: 18px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: #a1a1aa;
+    font-size: 0.7rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Horizontal variation for full width block layout elements */
+.horizontal-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* Dynamic ROI & Targeting Callout Footer Elements */
+.system-metric-pill {
+    font-size: 0.9rem;
+    padding: 16px 20px;
+    border-radius: 10px;
+    line-height: 1.5;
+    margin-top: auto;
+}
+
+.system-metric-pill strong {
+    font-weight: 600;
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.system-metric-pill.roi {
+    background: rgba(99, 102, 241, 0.06);
+    border: 1px solid rgba(99, 102, 241, 0.15);
+    color: #e0e7ff;
+}
+
+.system-metric-pill.roi strong {
+    color: #818cf8;
+}
+
+.system-metric-pill.best-for {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: #e4e4e7;
+}
+
+.system-metric-pill.best-for strong {
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN SYSTEM OVERRIDES
+   ========================================================================== */
+@media (max-width: 968px) {
+    .systems-grid {
+        grid-template-columns: 1fr;
+    }
+    .full-width-card {
+        grid-column: span 1;
+    }
+    .horizontal-steps {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .systems-main-header h2 {
+        font-size: 2rem;
+    }
+}
