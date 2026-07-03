@@ -1041,6 +1041,7 @@ h2 {
     position: relative !important;
     float: none !important;
     clear: both !important;
+   
 }
 
 /* Ensure the portfolio grid doesn't leak its child elements */
@@ -1298,5 +1299,131 @@ h2 {
     }
     .graphic-canvas-container {
         border-radius: 14px; /* Slightly softer curve on smaller hardware profiles */
+    }
+}
+   /* ==========================================
+   CINEMATIC HERO VIDEO BACKGROUND STYLES
+   ========================================== */
+.hero-video-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #050505; /* Solid canvas backdrop during video load initialization */
+}
+
+.video-background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-backend-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Prevents warping or image stretching */
+    filter: brightness(30%) contrast(105%) grayscale(20%); /* Custom color grade overlay for luxury mood */
+}
+
+/* Luxury dark gradient to maximize typography legibility and mask page boundaries */
+.hero-video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(5, 5, 5, 0.4) 0%,
+        rgba(5, 5, 5, 0.6) 70%,
+        #050505 100__
+    );
+}
+
+/* Structural Text Overlays */
+.hero-content-wrapper {
+    position: relative;
+    z-index: 2; /* Sits completely above the video containers */
+    text-align: center;
+    max-width: 1050px;
+    padding: 140px 24px 80px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.agency-tag-frame {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(15, 15, 15, 0.6);
+    backdrop-filter: blur(8px);
+    padding: 6px 18px;
+    border-radius: 100px;
+    margin-bottom: 24px;
+}
+
+.agency-badge {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.hero-content-wrapper h1 {
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+}
+
+.hero-lead {
+    font-size: 1.15rem;
+    line-height: 1.65;
+    color: #cccccc;
+    max-width: 650px;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.hero-cta-group {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+/* Responsive Scaling Constraints for Devices */
+@media (max-width: 992px) {
+    .hero-content-wrapper h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content-wrapper {
+        padding-top: 100px;
+    }
+    .hero-content-wrapper h1 {
+        font-size: 2rem;
+    }
+    .hero-lead {
+        font-size: 1.05rem;
+    }
+    .hero-cta-group {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+    .hero-cta-group .btn-primary,
+    .hero-cta-group .btn-secondary {
+        width: 100%;
+        max-width: 300px;
     }
 }
