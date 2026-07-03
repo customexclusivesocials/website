@@ -1457,3 +1457,51 @@ p {
         margin-top: 20px;
     }
 }
+/* ==========================================================================
+   PORTFOLIO LIVE CARD INTERACTION RULES
+   ========================================================================== */
+.portfolio-grid-interactive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.portfolio-link-card {
+    background: #0b0b0f;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 16px;
+    text-decoration: none; /* Strips ugly default browser underlines */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    cursor: pointer; /* Enforces clean hand icon feedback on hover */
+    position: relative;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Brightens card border and applies a subtle high-tech glow upon mouse entry */
+.portfolio-link-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(99, 102, 241, 0.3); /* Tech indigo accent border */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 
+                0 0 20px rgba(99, 102, 241, 0.05);
+}
+
+/* Changes text colors fluidly when the user hovers over the parent card container */
+.portfolio-link-card:hover .client-name {
+    color: #ffffff;
+}
+
+.portfolio-link-card:hover .action-arrow-link {
+    color: #818cf8; /* Animates the link arrow to draw eye tracking */
+}
+
+/* Ensures layout scaling holds up perfectly on mobile devices */
+@media (max-width: 768px) {
+    .portfolio-grid-interactive {
+        grid-template-columns: 1fr;
+    }
+}
