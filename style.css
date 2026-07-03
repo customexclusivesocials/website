@@ -1402,3 +1402,58 @@ p {
         font-size: 2rem;
     }
 }
+/* ==========================================================================
+   FIXED AI AUTOMATION IMAGE BANNER FRAME
+   ========================================================================== */
+.automation-right-graphic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.banner-image-frame {
+    position: relative;
+    width: 100%;
+    max-width: 540px;
+    height: 420px; /* Adjust height if you want it taller or shorter */
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    overflow: hidden;
+    background: #0b0b0f;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 
+                inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+.automation-banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the frame beautifully without distorting */
+    display: block;
+    filter: brightness(90%) contrast(105%);
+    transition: transform 0.5s ease;
+}
+
+.banner-image-frame:hover .automation-banner-img {
+    transform: scale(1.03); /* Subtle fluid zoom on hover */
+}
+
+/* Adds a high-tech glass-like subtle lighting effect over your banner */
+.banner-glow-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 50%, rgba(99, 102, 241, 0.02) 100%);
+    pointer-events: none;
+}
+
+/* Responsive adjustment for tablets/phones */
+@media (max-width: 1024px) {
+    .banner-image-frame {
+        height: 320px;
+        max-width: 100%;
+        margin-top: 20px;
+    }
+}
