@@ -1301,3 +1301,468 @@ h2 {
         border-radius: 14px; /* Slightly softer curve on smaller hardware profiles */
     }
 }
+/* ==========================================================================
+   1. CINEMATIC HERO VIDEO BACKGROUND STYLES
+   ========================================================================== */
+.hero-video-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #050505; /* Solid backdrop layer while video initializes */
+}
+
+.video-background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-backend-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Prevents stretching or distortion */
+    filter: brightness(35%) contrast(105%) grayscale(15%); /* Luxury deep color grade */
+}
+
+/* Fixed Gradient Mask to ensure typography readability */
+.hero-video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(5, 5, 5, 0.4) 0%,
+        rgba(5, 5, 5, 0.6) 70%,
+        #050505 100%
+    );
+}
+
+/* Foreground Content Elements */
+.hero-content-wrapper {
+    position: relative;
+    z-index: 2; /* Forces text to sit completely above the video canvas */
+    text-align: center;
+    max-width: 1050px;
+    padding: 140px 24px 80px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.agency-tag-frame {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(15, 15, 15, 0.6);
+    backdrop-filter: blur(8px);
+    padding: 6px 18px;
+    border-radius: 100px;
+    margin-bottom: 24px;
+}
+
+.agency-badge {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.hero-content-wrapper h1 {
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+}
+
+.hero-lead {
+    font-size: 1.15rem;
+    line-height: 1.65;
+    color: #cccccc;
+    max-width: 650px;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.hero-cta-group {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+/* ==========================================================================
+   2. PORTFOLIO INTERACTIVE GRID ARCHITECTURE
+   ========================================================================== */
+.portfolio-interactive-section {
+    padding: 120px 5%;
+    background: #050505;
+    border-top: 1px solid #121212;
+}
+
+.section-header-minimal {
+    max-width: 1300px;
+    margin: 0 auto 50px auto;
+}
+
+.section-header-minimal h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+    margin-top: 10px;
+}
+
+.section-tag {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #666666;
+}
+
+.portfolio-grid-interactive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+    gap: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Base Link Card Card Formatting */
+.portfolio-link-card {
+    background: #0a0a0a;
+    border: 1px solid #161616;
+    border-radius: 20px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; 
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-preview-window {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    background: #111111;
+    overflow: hidden;
+    border-bottom: 1px solid #141414;
+}
+
+.preview-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(20%) brightness(85%);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+}
+
+.brand-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: screen;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.card-body-content {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-header-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.project-tag {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #666666;
+    font-weight: 500;
+}
+
+.status-indicator {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #a3a3a3;
+    background: #141414;
+    padding: 4px 12px;
+    border-radius: 100px;
+    border: 1px solid #222222;
+}
+
+.client-name {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.01em;
+}
+
+.client-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #888888;
+    font-weight: 300;
+    margin: 0 0 35px 0;
+    flex-grow: 1;
+}
+
+.card-footer-action {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff;
+    font-weight: 500;
+    padding-top: 24px;
+    border-top: 1px solid #141414;
+}
+
+.link-arrow {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+/* ==========================================================================
+   3. CLIENT SPECIFIC HOVER PALETTES
+   ========================================================================== */
+.portfolio-link-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.7);
+}
+
+.portfolio-link-card:hover .preview-img {
+    transform: scale(1.03);
+    filter: grayscale(0%) brightness(95%);
+}
+
+.portfolio-link-card:hover .link-arrow {
+    transform: translateX(6px);
+}
+
+/* SQIN MED */
+.brand-sqin:hover { border-color: #4a1515; }
+.brand-sqin .brand-overlay { background: linear-gradient(to bottom, rgba(139, 0, 0, 0.15), transparent); }
+
+/* SHOP SQIN */
+.brand-shopsqin:hover { border-color: #5c4326; }
+.brand-shopsqin .brand-overlay { background: linear-gradient(to bottom, rgba(212, 175, 55, 0.1), transparent); }
+
+/* MADEUP BY BROOKE */
+.brand-madeup:hover { border-color: #5e4a43; }
+.brand-madeup .brand-overlay { background: linear-gradient(to bottom, rgba(230, 204, 196, 0.08), transparent); }
+
+/* BLOOM LIGHTHOUSE */
+.brand-bloom:hover { border-color: #2c3e50; }
+.brand-bloom .brand-overlay { background: linear-gradient(to bottom, rgba(52, 152, 219, 0.08), transparent); }
+
+/* CUSTOM EXCLUSIVE SOCIALS (AGENCY HUB) */
+.brand-ces:hover { border-color: #ffffff; }
+.brand-ces .brand-overlay { background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), transparent); }
+
+/* ==========================================================================
+   4. WORKFLOW GRAPHIC CANVAS SHOWCASE
+   ========================================================================== */
+.workflow-graphic-section {
+    padding: 80px 5%;
+    background-color: #050505;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.graphic-canvas-container {
+    max-width: 1150px;
+    width: 100%;
+    border: 1px solid #141414;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
+    background-color: #0a0a0a;
+}
+
+.workflow-display-asset {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* ==========================================================================
+   5. PRODUCTION PIPELINES & VAULT STYLES
+   ========================================================================== */
+.production-vault-section {
+    padding: 140px 5%;
+    background-color: #050505;
+    border-top: 1px solid #121212;
+}
+
+.production-intro {
+    max-width: 850px;
+    margin: 0 auto 60px auto;
+}
+
+.production-intro h2 {
+    font-size: 2.3rem;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+    margin-top: 14px;
+    margin-bottom: 24px;
+    line-height: 1.25;
+}
+
+.production-intro .lead-text {
+    font-size: 1.15rem;
+    line-height: 1.75;
+    color: #a3a3a3;
+    font-weight: 300;
+}
+
+.production-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.prod-card {
+    background: #090909;
+    border: 1px solid #141414;
+    border-radius: 16px;
+    padding: 45px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 320px;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.prod-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.prod-index {
+    font-family: monospace;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: #525252;
+    font-weight: 600;
+}
+
+.prod-status {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888888;
+    background: #121212;
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: 1px solid #1a1a1a;
+}
+
+.prod-card h3 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 14px;
+    letter-spacing: -0.01em;
+}
+
+.prod-card p {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: #808080;
+    font-weight: 300;
+    margin-bottom: 40px;
+    flex-grow: 1;
+}
+
+.prod-tags-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 20px;
+    border-top: 1px solid #121212;
+}
+
+.prod-tag-pill {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #666666;
+    background: transparent;
+    padding: 5px 12px;
+    border-radius: 6px;
+    border: 1px solid #161616;
+    transition: all 0.3s ease;
+}
+
+.prod-card:hover {
+    transform: translateY(-5px);
+    border-color: #262626;
+    background-color: #0c0c0c;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+}
+
+.prod-card:hover .prod-index { color: #ffffff; }
+.prod-card:hover .prod-tag-pill { color: #ffffff; border-color: #333333; background: #141414; }
+
+/* ==========================================================================
+   6. RESPONSIVE DEVICE MEDIA BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 1200px) {
+    .portfolio-grid-interactive {
+        grid-template-columns: 1fr;
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-content-wrapper h1 { font-size: 2.5rem; }
+    .production-grid { grid-template-columns: 1fr; }
+    .prod-card { min-height: auto; padding: 35px 24px; }
+}
+
+@media (max-width: 768px) {
+    .hero-content-wrapper { padding-top: 100px; }
+    .hero-content-wrapper h1 { font-size: 2rem; }
+    .hero-lead { font-size: 1.05rem; }
+    .hero-cta-group { flex-direction: column; width: 100%; gap: 12px; }
+    .hero-cta-group a { width: 100%; max-width: 300px; text-align: center; }
+    
+    .portfolio-grid-interactive { grid-template-columns: 1fr; }
+    .card-body-content { padding: 30px 24px; }
+    .client-name { font-size: 1.3rem; }
+    .card-preview-window { height: 180px; }
+
+    .workflow-graphic-section { padding: 40px 16px; }
+    .graphic-canvas-container { border-radius: 14px; }
+}
