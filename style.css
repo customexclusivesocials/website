@@ -844,4 +844,34 @@ body {
     grid-template-columns: 1fr;
   }
 }
+/* ==========================================================================
+   SURGICAL FIX FOR PORTFOLIO CARD IMAGES
+   ========================================================================== */
 
+/* 1. Force the image container to hold its size and hide anything spilling out */
+.card-preview-window {
+    width: 100%;
+    height: 220px;            /* Fixes the height of the preview area */
+    position: relative;
+    overflow: hidden;         /* CRUCIAL: Stops a massive image from breaking the layout */
+    background: #12121a;      /* Placeholder background color while loading */
+}
+
+/* 2. Constrain the image to the exact boundaries of the window */
+.portfolio-inline-preview {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;          /* Enforces strict horizontal scaling constraints */
+    display: block;
+    object-fit: cover;        /* Crops the image to fill the card perfectly without stretching */
+    object-position: top center; /* Focuses on the top navigation area of the screenshot */
+}
+
+/* 3. Ensure the parent card container behaves within the grid boundaries */
+.portfolio-link-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;          /* Prevents the card itself from expanding past the grid track */
+    overflow: hidden;         /* Contains the card inner elements cleanly */
+}
