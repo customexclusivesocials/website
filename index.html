@@ -3,178 +3,80 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Custom Exclusive Socials | Portfolio</title>
+<title>Custom Exclusive Socials</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<style>
-:root {
-  --bone: #F3EFE6;
-  --ink: #211A14;
-  --stone: #A79A85;
-  --bronze: #8A5A3B;
-  --white: #FBF9F5;
-}
+<link rel="stylesheet" href="style.css">
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Manrope', sans-serif;
-  background: var(--bone);
-  color: var(--ink);
-  line-height: 1.6;
-}
-
-/* HERO */
-.hero {
-  padding: 120px 10%;
-  text-align: left;
-}
-
-.hero h1 {
-  font-family: 'Instrument Serif', serif;
-  font-size: 64px;
-  font-weight: 400;
-  line-height: 1.1;
-}
-
-.hero p {
-  margin-top: 20px;
-  max-width: 600px;
-  font-size: 16px;
-  color: var(--stone);
-}
-
-/* SECTION TITLE */
-.section-title {
-  padding: 60px 10% 20px;
-  font-family: 'Instrument Serif', serif;
-  font-size: 32px;
-}
-
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  padding: 0 10% 120px;
-}
-
-.card {
-  background: var(--white);
-  border: 1px solid rgba(33,26,20,0.08);
-  padding: 30px;
-  transition: 0.3s ease;
-  position: relative;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  border-color: var(--bronze);
-}
-
-.card h3 {
-  font-family: 'Instrument Serif', serif;
-  font-size: 26px;
-  margin-bottom: 10px;
-}
-
-.meta {
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--stone);
-  margin-bottom: 15px;
-}
-
-.card p {
-  font-size: 14px;
-  color: var(--ink);
-}
-
-.tag {
-  margin-top: 20px;
-  font-size: 12px;
-  color: var(--bronze);
-}
-
-/* DIVIDER */
-.divider {
-  width: 80%;
-  margin: 0 auto;
-  border-top: 1px solid rgba(33,26,20,0.1);
-}
-
-/* RESPONSIVE */
-@media(max-width: 768px){
-  .hero h1 { font-size: 40px; }
-  .grid { grid-template-columns: 1fr; }
-}
-</style>
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
 
-<!-- HERO -->
+<nav class="nav">
+  <div class="logo">CES</div>
+  <div class="nav-links">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
 <section class="hero">
-  <h1>Custom Exclusive Socials</h1>
-  <p>Luxury digital systems, web design, branding, and conversion strategy for modern aesthetic and service-based businesses.</p>
+  <h1 class="reveal-text">Custom Exclusive Socials</h1>
+  <p class="reveal-text">Luxury digital systems, branding, and conversion-focused web design.</p>
 </section>
 
-<div class="divider"></div>
+<section id="work" class="section">
+  <h2 class="section-title">Selected Work</h2>
 
-<!-- CASE STUDIES -->
-<h2 class="section-title">Selected Work</h2>
+  <div class="grid">
 
-<section class="grid">
+    <div class="card" onclick="openModal('sqin')">
+      <h3>SQIN MED</h3>
+      <p>Clinical luxury redesign</p>
+    </div>
 
-  <div class="card">
-    <div class="meta">Web Design • Branding</div>
-    <h3>La PMUA Niagara</h3>
-    <p>Luxury PMU brand lacked premium funnel → built conversion-focused website → elevated inquiries and perceived value.</p>
-    <div class="tag">View Case Study →</div>
+    <div class="card" onclick="openModal('pmu')">
+      <h3>La PMUA Niagara</h3>
+      <p>Luxury PMU brand system</p>
+    </div>
+
+    <div class="card" onclick="openModal('shop')">
+      <h3>SQIN MED Shop</h3>
+      <p>E-commerce + Shopify system</p>
+    </div>
+
   </div>
-
-  <div class="card">
-    <div class="meta">Web Design • UX</div>
-    <h3>SQIN MED</h3>
-    <p>Outdated med spa site → redesigned structured clinical-luxury experience → improved trust and booking flow.</p>
-    <div class="tag">View Case Study →</div>
-  </div>
-
-  <div class="card">
-    <div class="meta">Social Media Strategy</div>
-    <h3>SQIN MED Socials</h3>
-    <p>Lacked content direction → built multi-platform authority system → increased engagement and inbound inquiries.</p>
-    <div class="tag">View Case Study →</div>
-  </div>
-
-  <div class="card">
-    <div class="meta">E-Commerce • Shopify</div>
-    <h3>SQIN MED Shop</h3>
-    <p>No online store → built Shopify system from scratch → created 24/7 revenue stream + email marketing system.</p>
-    <div class="tag">View Case Study →</div>
-  </div>
-
-  <div class="card">
-    <div class="meta">Web Design • Branding</div>
-    <h3>Bloom Lighthouse</h3>
-    <p>No digital presence → built holistic healing platform → enabled cacao sales and online discovery.</p>
-    <div class="tag">View Case Study →</div>
-  </div>
-
-  <div class="card">
-    <div class="meta">Web Design • UX</div>
-    <h3>Next Step Resumes</h3>
-    <p>Low authority site → rebuilt structured conversion system → improved trust and client conversions.</p>
-    <div class="tag">View Case Study →</div>
-  </div>
-
 </section>
 
+<!-- BEFORE AFTER SECTION -->
+<section class="section">
+  <h2 class="section-title">Proof of Results</h2>
+
+  <div class="slider-container">
+
+    <div class="slider">
+      <img src="before.jpg" class="before">
+      <img src="after.jpg" class="after">
+      <input type="range" min="0" max="100" value="50" class="range" />
+    </div>
+
+  </div>
+</section>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">×</span>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
+<script src="script.js"></script>
