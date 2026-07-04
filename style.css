@@ -453,6 +453,17 @@ p {
     border-top: 1px solid rgba(255, 255, 255, 0.03);
 }
 
+.section-header-minimal {
+    max-width: 800px;
+    margin-bottom: 50px;
+}
+
+.text-center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .portfolio-grid-interactive {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
