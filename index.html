@@ -1,265 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Exclusive Socials</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Custom Exclusive Socials | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bone: #F3EFE6;
+  --ink: #211A14;
+  --stone: #A79A85;
+  --bronze: #8A5A3B;
+  --white: #FBF9F5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background: var(--bone);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+/* HERO */
+.hero {
+  padding: 120px 10%;
+  text-align: left;
+}
+
+.hero h1 {
+  font-family: 'Instrument Serif', serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.hero p {
+  margin-top: 20px;
+  max-width: 600px;
+  font-size: 16px;
+  color: var(--stone);
+}
+
+/* SECTION TITLE */
+.section-title {
+  padding: 60px 10% 20px;
+  font-family: 'Instrument Serif', serif;
+  font-size: 32px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding: 0 10% 120px;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid rgba(33,26,20,0.08);
+  padding: 30px;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--bronze);
+}
+
+.card h3 {
+  font-family: 'Instrument Serif', serif;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.meta {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--stone);
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 14px;
+  color: var(--ink);
+}
+
+.tag {
+  margin-top: 20px;
+  font-size: 12px;
+  color: var(--bronze);
+}
+
+/* DIVIDER */
+.divider {
+  width: 80%;
+  margin: 0 auto;
+  border-top: 1px solid rgba(33,26,20,0.1);
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px){
+  .hero h1 { font-size: 40px; }
+  .grid { grid-template-columns: 1fr; }
+}
+</style>
 </head>
+
 <body>
 
-    <section class="hero-section">
-        <div class="hero-content-wrapper">
-            <div class="agency-tag-frame">
-                <span class="agency-badge">Custom Exclusive Socials</span>
-            </div>
-            <h1>Helping Businesses Grow Through<br>Strategic Social Media, Branding & Web Design</h1>
-            <p class="hero-lead">We create scroll-stopping content, luxury branding, and high-converting websites that turn followers into customers.</p>
-            <div class="hero-cta-group">
-                <a href="#consultation" class="btn-primary">Book A Free Consultation</a>
-                <a href="#portfolio" class="btn-secondary">View Portfolio</a>
-            </div>
-        </div>
-    </section>
-
-<section id="portfolio" class="portfolio-interactive-section">
-    <div class="container-inner">
-        <div class="section-header-minimal">
-            <span class="section-tag">Case Studies</span>
-            <h2>Selected Digital Assets</h2>
-        </div>
-
-        <div class="portfolio-grid-interactive">
-
-            <a href="https://sqinmed.ca" target="_blank" rel="noopener noreferrer" class="portfolio-link-card">
-                <div class="card-preview-window">
-                    <div class="glass-glare-effect"></div>
-                </div>
-                <div class="card-body-content">
-                    <div class="card-header-meta">
-                        <span class="project-tag">Web Design & Medical Aesthetics Branding</span>
-                        <span class="status-indicator">Live Site ↗</span>
-                    </div>
-                    <h3 class="client-name">SQIN Med & Wellness Clinic</h3>
-                    <p class="client-description">A luxury digital ecosystem engineered for elite medical aesthetics, featuring high-conversion booking pathways, custom front-end styling, and clean editorial layouts.</p>
-                    <span class="action-arrow-link">Launch Live Architecture →</span>
-                </div>
-            </a>
-
-            <a href="https://bloomlighthouse.ca" target="_blank" rel="noopener noreferrer" class="portfolio-link-card">
-                <div class="card-preview-window">
-                    <div class="glass-glare-effect"></div>
-                </div>
-                <div class="card-body-content">
-                    <div class="card-header-meta">
-                        <span class="project-tag">Digital Strategy & Web Infrastructure</span>
-                        <span class="status-indicator">Live Site ↗</span>
-                    </div>
-                    <h3 class="client-name">Bloom Lighthouse</h3>
-                    <p class="client-description">A modern digital platform maximizing reach and organic traffic presence, built with lightning-fast performance optimization and minimalist luxury design assets.</p>
-                    <span class="action-arrow-link">Launch Live Architecture →</span>
-                </div>
-            </a>
-
-            <a href="#" class="portfolio-link-card">
-                <div class="card-preview-window">
-                    <div class="glass-glare-effect"></div>
-                </div>
-                <div class="card-body-content">
-                    <div class="card-header-meta">
-                        <span class="project-tag">Brand Identity & Visual Assets</span>
-                        <span class="status-indicator">Case Study</span>
-                    </div>
-                    <h3 class="client-name">MadeUp By Brooke</h3>
-                    <p class="client-description">High-end clinical brand positioning and visual portfolio layout designed to elevate advanced permanent makeup aesthetics and permanent cosmetics artistry.</p>
-                    <span class="action-arrow-link">Explore Brand Assets →</span>
-                </div>
-            </a>
-
-        </div>
-    </div>
+<!-- HERO -->
+<section class="hero">
+  <h1>Custom Exclusive Socials</h1>
+  <p>Luxury digital systems, web design, branding, and conversion strategy for modern aesthetic and service-based businesses.</p>
 </section>
 
-<section class="why-ces-section">
-    <div class="container-inner">
+<div class="divider"></div>
 
-        <div class="production-intro">
-            <h2>Why Work With CES</h2>
-        </div>
+<!-- CASE STUDIES -->
+<h2 class="section-title">Selected Work</h2>
 
-        <div class="production-grid">
+<section class="grid">
 
-            <div class="prod-card">
-                <h3>Proven Track Record</h3>
-                <p>
-                    We don't just build sites; we deploy high-end digital assets. From luxury aesthetics clinics to multi-page service brands, our work is trusted by businesses built to scale.
-                </p>
-            </div>
+  <div class="card">
+    <div class="meta">Web Design • Branding</div>
+    <h3>La PMUA Niagara</h3>
+    <p>Luxury PMU brand lacked premium funnel → built conversion-focused website → elevated inquiries and perceived value.</p>
+    <div class="tag">View Case Study →</div>
+  </div>
 
-            <div class="prod-card">
-                <h3>Strategic Execution</h3>
-                <p>
-                    Every piece of content, caption, and layout rule we create serves a purpose: turning casual profile visitors and organic traffic into high-value, paying clients.
-                </p>
-            </div>
+  <div class="card">
+    <div class="meta">Web Design • UX</div>
+    <h3>SQIN MED</h3>
+    <p>Outdated med spa site → redesigned structured clinical-luxury experience → improved trust and booking flow.</p>
+    <div class="tag">View Case Study →</div>
+  </div>
 
-            <div class="prod-card">
-                <h3>End-to-End Management</h3>
-                <p>
-                    From custom mockups and front-end code to daily content pipelines and growth workflows, we handle the technical execution so you can run your business.
-                </p>
-            </div>
+  <div class="card">
+    <div class="meta">Social Media Strategy</div>
+    <h3>SQIN MED Socials</h3>
+    <p>Lacked content direction → built multi-platform authority system → increased engagement and inbound inquiries.</p>
+    <div class="tag">View Case Study →</div>
+  </div>
 
-        </div>
+  <div class="card">
+    <div class="meta">E-Commerce • Shopify</div>
+    <h3>SQIN MED Shop</h3>
+    <p>No online store → built Shopify system from scratch → created 24/7 revenue stream + email marketing system.</p>
+    <div class="tag">View Case Study →</div>
+  </div>
 
-    </div>
-</section>
+  <div class="card">
+    <div class="meta">Web Design • Branding</div>
+    <h3>Bloom Lighthouse</h3>
+    <p>No digital presence → built holistic healing platform → enabled cacao sales and online discovery.</p>
+    <div class="tag">View Case Study →</div>
+  </div>
 
-<section class="services-section">
-
-    <div class="section-header">
-        <span class="section-tag">Expertise</span>
-        <h2>Automated Workflows & Systems</h2>
-        <p>
-            We build seamless, hands-free digital pipelines that optimize your operations, engage your clients, and scale your brand without the manual overhead.
-        </p>
-    </div>
-
-    <!-- Personalized Video Creation -->
-    <div class="service-card">
-        <h3>Personalized Video Creation</h3>
-        <ol>
-            <li>A new customer fills out a custom form on your website.</li>
-            <li>Information is securely routed directly to your video ecosystem.</li>
-            <li>Your automated system generates a personalized dynamic welcome video.</li>
-            <li>The completed video is instantly emailed to the customer.</li>
-        </ol>
-        <p><strong>ROI:</strong> Saves hours on manual outreach while delivering an elite first impression.</p>
-    </div>
-
-    <!-- Content Scalability -->
-    <div class="service-card">
-        <h3>Social Media Content Automation</h3>
-        <ol>
-            <li>A fresh piece of content or blog post is published on your site.</li>
-            <li>The system cross-posts to LinkedIn, Facebook, and X.</li>
-            <li>Follow-up reminders are queued automatically.</li>
-        </ol>
-        <p><strong>ROI:</strong> Expands organic reach and content lifespan.</p>
-    </div>
-
-    <!-- Intelligent Booking -->
-    <div class="service-card">
-        <h3>Intelligent Appointment Booking</h3>
-        <ol>
-            <li>Client books via your website.</li>
-            <li>Syncs to Google Calendar or Outlook.</li>
-            <li>Branded confirmation is sent instantly.</li>
-            <li>Automated reminders sent 24h before session.</li>
-        </ol>
-        <p><strong>Best For:</strong> Clinics, consultants, service businesses.</p>
-    </div>
-
-    <!-- Reputation -->
-    <div class="service-card">
-        <h3>Feedback & Review Collection</h3>
-        <ol>
-            <li>Service is completed.</li>
-            <li>Automated review request is sent.</li>
-            <li>Sentiment logged into system (Airtable / Sheets).</li>
-        </ol>
-        <p><strong>Best For:</strong> Reputation scaling businesses.</p>
-    </div>
-
-    <!-- Team Pipelines -->
-    <div class="service-card">
-        <h3>Project Task Creation & Delegation</h3>
-        <ol>
-            <li>Project brief submitted.</li>
-            <li>Tasks created automatically in system.</li>
-            <li>Assigned to specialists based on category.</li>
-        </ol>
-        <p><strong>ROI:</strong> Eliminates manual management and errors.</p>
-    </div>
+  <div class="card">
+    <div class="meta">Web Design • UX</div>
+    <h3>Next Step Resumes</h3>
+    <p>Low authority site → rebuilt structured conversion system → improved trust and client conversions.</p>
+    <div class="tag">View Case Study →</div>
+  </div>
 
 </section>
 
-<section id="pricing" class="pricing-matrix-section">
-    <div class="container-inner">
-        <div class="section-meta-header text-center">
-            <span class="section-tag-tracker">Investment</span>
-            <h2>Transparent Growth Packages</h2>
-            <p class="section-subtitle-clear">Elite digital transformation packages built for high-performance businesses.</p>
-        </div>
-
-        <div class="pricing-cards-container">
-            <div class="price-tier-card premium-glow-card">
-                <div class="card-badge-accent">Most Popular</div>
-                <div class="tier-header">
-                    <h3>Premium Social</h3>
-                    <div class="tier-price">$2,497<span>/month</span></div>
-                    <p class="tier-brief">Full-service media takeover for maximum visibility and community customer conversion.</p>
-                </div>
-                <ul class="tier-features-list">
-                    <li><span>20</span> Strategic Curated Posts</li>
-                    <li><span>12</span> High-Yield Cinematic Reels</li>
-                    <li>Daily Stories & Engagement Management</li>
-                    <li>Full Dedicated Community Management</li>
-                    <li>Monthly On-Site Content Creation Day</li>
-                    <li>In-Depth Competitor Analytics Research</li>
-                    <li>Custom Scale & Growth Blueprint Strategy</li>
-                </ul>
-                <a href="#consultation" class="btn-tier-action primary-tier-btn">Get Started</a>
-            </div>
-
-            <div class="price-tier-card">
-                <div class="tier-header">
-                    <h3>Website Design</h3>
-                    <div class="tier-price">Custom Architecture</div>
-                    <p class="tier-brief">Elite, hand-coded front-end builds optimized perfectly for lightning-fast client bookings.</p>
-                </div>
-                <div class="web-sub-pricing-stack">
-                    <div class="web-price-item">
-                        <div class="web-meta">
-                            <h4>Landing Page</h4>
-                            <p>Sleek single-page conversion asset.</p>
-                        </div>
-                        <div class="web-cost">$997</div>
-                    </div>
-                    <div class="web-price-item">
-                        <div class="web-meta">
-                            <h4>Business Website</h4>
-                            <p>Multi-page elite brand authority hub.</p>
-                        </div>
-                        <div class="web-cost">$1,997 - $2,997</div>
-                    </div>
-                    <div class="web-price-item">
-                        <div class="web-meta">
-                            <h4>Ecommerce Website</h4>
-                            <p>Heavy-duty commercial inventory storefront.</p>
-                        </div>
-                        <div class="web-cost">$3,500 - $6,000+</div>
-                    </div>
-                </div>
-                <a href="#consultation" class="btn-tier-action">Inquire Plan</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<footer id="consultation" class="master-footer-frame">
-    <div class="container-inner">
-        <div class="footer-cta-block">
-            <h2>Book A Free Consultation</h2>
-            <p>Ready to scale your brand? Drop us a line directly and let's construct your pipeline.</p>
-            <a href="mailto:customexclusivesocials@gmail.com" class="footer-email-link">customexclusivesocials@gmail.com</a>
-        </div>
-
-        <div class="footer-bottom-bar">
-            <p class="copyright-txt">&copy; 2026 Custom Exclusive Socials. All rights reserved.</p>
-            <p class="footer-motto">Elevating digital brands through strategic design.</p>
-        </div>
-    </div>
-</footer>
 </body>
 </html>
