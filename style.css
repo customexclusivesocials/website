@@ -845,33 +845,48 @@ body {
   }
 }
 /* ==========================================================================
-   SURGICAL FIX FOR PORTFOLIO CARD IMAGES
+   PORTFOLIO CARD & IMAGE RESTRAINING SYSTEM
    ========================================================================== */
 
-/* 1. Force the image container to hold its size and hide anything spilling out */
-.card-preview-window {
-    width: 100%;
-    height: 220px;            /* Fixes the height of the preview area */
-    position: relative;
-    overflow: hidden;         /* CRUCIAL: Stops a massive image from breaking the layout */
-    background: #12121a;      /* Placeholder background color while loading */
-}
-
-/* 2. Constrain the image to the exact boundaries of the window */
-.portfolio-inline-preview {
-    width: 100%;
-    height: 100%;
-    max-width: 100%;          /* Enforces strict horizontal scaling constraints */
-    display: block;
-    object-fit: cover;        /* Crops the image to fill the card perfectly without stretching */
-    object-position: top center; /* Focuses on the top navigation area of the screenshot */
-}
-
-/* 3. Ensure the parent card container behaves within the grid boundaries */
+/* 1. Set a uniform size for the entire card so it can't expand infinitely */
 .portfolio-link-card {
     display: flex;
     flex-direction: column;
+    height: 520px; /* Enforces a perfect, uniform height for all portfolio cards */
     width: 100%;
-    max-width: 100%;          /* Prevents the card itself from expanding past the grid track */
-    overflow: hidden;         /* Contains the card inner elements cleanly */
+    overflow: hidden;
+    background: #0b0b0f;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    text-decoration: none;
+    transition: transform 0.4s ease, border-color 0.4s ease;
+}
+
+/* 2. Lock the image container to the top portion of the card only */
+.card-preview-window {
+    height: 220px; /* Caps the image display area perfectly */
+    width: 100%;
+    position: relative;
+    overflow: hidden; /* Cuts off the rest of the screenshot from bleeding out */
+    flex-shrink: 0; /* Prevents the image window from changing size */
+    background: #12121a;
+}
+
+/* 3. Force the desktop screenshot to scale down and center its header logo */
+.portfolio-inline-preview {
+    width: 100%;
+    height: 100% !important;
+    display: block !important;
+    object-fit: cover !important; /* Crops the image frame cleanly without distortion */
+    object-position: top center !important; /* Shifts the crop to center the SQIN MED logo instead of the search icon */
+}
+
+/* 4. Pad the text area and make sure it fills the remaining bottom half */
+.card-body-content {
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Utilises the remaining card space for text layouts */
+    justify-content: space-between;
+    overflow: hidden;
 }
