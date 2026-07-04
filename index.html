@@ -1,79 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Custom Exclusive Socials</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
-
-<!-- GSAP -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Exclusive Socials</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<nav class="nav">
-  <div class="logo">CES</div>
-  <div class="nav-links">
-    <a href="#work">Work</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
+    <section class="hero-video-section">
+        <div class="hero-content-wrapper">
+            <div class="agency-tag-frame">
+                <span class="agency-badge">Custom Exclusive Socials</span>
+            </div>
+            <h1>Helping Businesses Grow Through<br>Strategic Social Media, Branding & Web Design</h1>
+            <p class="hero-lead">We create scroll-stopping content, luxury branding, and high-converting websites that turn followers into customers.</p>
+            <div class="hero-cta-group">
+                <a href="#consultation" class="btn-primary">Book A Free Consultation</a>
+                <a href="#portfolio" class="btn-secondary">View Portfolio</a>
+            </div>
+        </div>
+    </section>
 
-<section class="hero">
-  <h1 class="reveal-text">Custom Exclusive Socials</h1>
-  <p class="reveal-text">We build seamless, hands-free digital pipelines that optimize your operations, engage your clients, and scale your brand without the manual overhead.</p>
+<section id="portfolio" class="portfolio-interactive-section">
+    <div class="container-inner">
+        <div class="section-header-minimal">
+            <span class="section-tag">Case Studies</span>
+            <h2>Selected Digital Assets</h2>
+        </div>
+
+        <div class="portfolio-grid-interactive">
+
+            <a href="https://sqinmed.ca" target="_blank" rel="noopener noreferrer" class="portfolio-link-card">
+                <div class="card-preview-window">
+                    <div class="glass-glare-effect"></div>
+                </div>
+                <div class="card-body-content">
+                    <div class="card-header-meta">
+                        <span class="project-tag">Web Design & Medical Aesthetics Branding</span>
+                        <span class="status-indicator">Live Site ↗</span>
+                    </div>
+                    <h3 class="client-name">SQIN Med & Wellness Clinic</h3>
+                    <p class="client-description">A luxury digital ecosystem engineered for elite medical aesthetics, featuring high-conversion booking pathways, custom front-end styling, and clean editorial layouts.</p>
+                    <span class="action-arrow-link">Launch Live Architecture →</span>
+                </div>
+            </a>
+
+            <a href="https://bloomlighthouse.ca" target="_blank" rel="noopener noreferrer" class="portfolio-link-card">
+                <div class="card-preview-window">
+                    <div class="glass-glare-effect"></div>
+                </div>
+                <div class="card-body-content">
+                    <div class="card-header-meta">
+                        <span class="project-tag">Digital Strategy & Web Infrastructure</span>
+                        <span class="status-indicator">Live Site ↗</span>
+                    </div>
+                    <h3 class="client-name">Bloom Lighthouse</h3>
+                    <p class="client-description">A modern digital platform maximizing reach and organic traffic presence, built with lightning-fast performance optimization and minimalist luxury design assets.</p>
+                    <span class="action-arrow-link">Launch Live Architecture →</span>
+                </div>
+            </a>
+
+            <a href="#" class="portfolio-link-card">
+                <div class="card-preview-window">
+                    <div class="glass-glare-effect"></div>
+                </div>
+                <div class="card-body-content">
+                    <div class="card-header-meta">
+                        <span class="project-tag">Brand Identity & Visual Assets</span>
+                        <span class="status-indicator">Case Study</span>
+                    </div>
+                    <h3 class="client-name">MadeUp By Brooke</h3>
+                    <p class="client-description">High-end clinical brand positioning and visual portfolio layout designed to elevate advanced permanent makeup aesthetics and permanent cosmetics artistry.</p>
+                    <span class="action-arrow-link">Explore Brand Assets →</span>
+                </div>
+            </a>
+
+        </div>
+    </div>
 </section>
 
-  <div class="grid">
+<section class="production-vault-section">
+    <div class="container-inner">
 
-    <div class="card" onclick="openModal('sqin')">
-      <h3>SQIN MED</h3>
-      <p>Clinical luxury redesign</p>
+        <div class="production-intro">
+            <h2>Why Work With CES</h2>
+        </div>
+
+        <div class="production-grid">
+
+            <div class="prod-card">
+                <h3>Proven Track Record</h3>
+                <p>
+                    We don't just build sites; we deploy high-end digital assets. From luxury aesthetics clinics to multi-page service brands, our work is trusted by businesses built to scale.
+                </p>
+            </div>
+
+            <div class="prod-card">
+                <h3>Strategic Execution</h3>
+                <p>
+                    Every piece of content, caption, and layout rule we create serves a purpose: turning casual profile visitors and organic traffic into high-value, paying clients.
+                </p>
+            </div>
+
+            <div class="prod-card">
+                <h3>End-to-End Management</h3>
+                <p>
+                    From custom mockups and front-end code to daily content pipelines and growth workflows, we handle the technical execution so you can run your business.
+                </p>
+            </div>
+
+        </div>
+
     </div>
-
-    <div class="card" onclick="openModal('pmu')">
-      <h3>La PMUA Niagara</h3>
-      <p>Luxury PMU brand system</p>
-    </div>
-
-    <div class="card" onclick="openModal('shop')">
-      <h3>SQIN MED Shop</h3>
-      <p>E-commerce + Shopify system</p>
-    </div>
-
-  </div>
 </section>
 
-<!-- BEFORE AFTER SECTION -->
-<section class="section">
-  <h2 class="section-title">Proof of Results</h2>
+<section class="systems-engine-section">
+    <div class="systems-container">
 
-  <div class="slider-container">
+        <div class="systems-main-header section-meta-header">
+            <span class="section-tag">Expertise</span>
+            <h2>Automated Workflows & Systems</h2>
+            <p class="section-subtitle-clear">
+                We build seamless, hands-free digital pipelines that optimize your operations, engage your clients, and scale your brand without the manual overhead.
+            </p>
+        </div>
 
-    <div class="slider">
-      <img src="before.jpg" class="before">
-      <img src="after.jpg" class="after">
-      <input type="range" min="0" max="100" value="50" class="range" />
+        <div class="systems-grid">
+
+            <!-- Personalized Video Creation -->
+            <div class="system-card">
+                <div class="card-meta">
+                    <span class="category-tag">Client Onboarding</span>
+                    <span class="system-status">Active</span>
+                </div>
+                <h3>Personalized Video Creation</h3>
+                <div class="step-timeline">
+                    <div class="step-item">A new customer fills out a custom form on your website.</div>
+                    <div class="step-item">Information is securely routed directly to your video ecosystem.</div>
+                    <div class="step-item">Your automated system generates a personalized dynamic welcome video.</div>
+                    <div class="step-item">The completed video is instantly emailed to the customer.</div>
+                </div>
+                <div class="system-metric-pill roi">
+                    <strong>ROI</strong>
+                    Saves hours on manual outreach while delivering an elite first impression.
+                </div>
+            </div>
+
+            <!-- Content Scalability -->
+            <div class="system-card">
+                <div class="card-meta">
+                    <span class="category-tag">Content Distribution</span>
+                    <span class="system-status">Active</span>
+                </div>
+                <h3>Social Media Content Automation</h3>
+                <div class="step-timeline">
+                    <div class="step-item">A fresh piece of content or blog post is published on your site.</div>
+                    <div class="step-item">The system cross-posts to LinkedIn, Facebook, and X.</div>
+                    <div class="step-item">Follow-up reminders are queued automatically.</div>
+                </div>
+                <div class="system-metric-pill roi">
+                    <strong>ROI</strong>
+                    Expands organic reach and content lifespan.
+                </div>
+            </div>
+
+            <!-- Intelligent Booking -->
+            <div class="system-card">
+                <div class="card-meta">
+                    <span class="category-tag">Client Booking</span>
+                    <span class="system-status">Active</span>
+                </div>
+                <h3>Intelligent Appointment Booking</h3>
+                <div class="step-timeline">
+                    <div class="step-item">Client books via your website.</div>
+                    <div class="step-item">Syncs to Google Calendar or Outlook.</div>
+                    <div class="step-item">Branded confirmation is sent instantly.</div>
+                    <div class="step-item">Automated reminders sent 24h before session.</div>
+                </div>
+                <div class="system-metric-pill best-for">
+                    <strong>Best For</strong>
+                    Clinics, consultants, service businesses.
+                </div>
+            </div>
+
+            <!-- Reputation -->
+            <div class="system-card">
+                <div class="card-meta">
+                    <span class="category-tag">Reputation Management</span>
+                    <span class="system-status">Active</span>
+                </div>
+                <h3>Feedback & Review Collection</h3>
+                <div class="step-timeline">
+                    <div class="step-item">Service is completed.</div>
+                    <div class="step-item">Automated review request is sent.</div>
+                    <div class="step-item">Sentiment logged into system (Airtable / Sheets).</div>
+                </div>
+                <div class="system-metric-pill best-for">
+                    <strong>Best For</strong>
+                    Reputation scaling businesses.
+                </div>
+            </div>
+
+            <!-- Team Pipelines -->
+            <div class="system-card full-width-card">
+                <div class="card-meta">
+                    <span class="category-tag">Team Operations</span>
+                    <span class="system-status">Active</span>
+                </div>
+                <h3>Project Task Creation & Delegation</h3>
+                <div class="step-timeline horizontal-steps">
+                    <div class="step-item">Project brief submitted.</div>
+                    <div class="step-item">Tasks created automatically in system.</div>
+                    <div class="step-item">Assigned to specialists based on category.</div>
+                </div>
+                <div class="system-metric-pill roi">
+                    <strong>ROI</strong>
+                    Eliminates manual management and errors.
+                </div>
+            </div>
+
+        </div>
     </div>
-
-  </div>
 </section>
 
-<!-- MODAL -->
-<div id="modal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">×</span>
-    <div id="modal-body"></div>
-  </div>
-</div>
+<section id="pricing" class="pricing-matrix-section">
+    <div class="container-inner">
+        <div class="section-meta-header text-center">
+            <span class="section-tag-tracker">Investment</span>
+            <h2>Transparent Growth Packages</h2>
+            <p class="section-subtitle-clear">Elite digital transformation packages built for high-performance businesses.</p>
+        </div>
 
-<script src="script.js"></script>
+        <div class="pricing-cards-container">
+            <div class="price-tier-card premium-glow-card">
+                <div class="card-badge-accent">Most Popular</div>
+                <div class="tier-header">
+                    <h3>Premium Social</h3>
+                    <div class="tier-price">$2,497<span>/month</span></div>
+                    <p class="tier-brief">Full-service media takeover for maximum visibility and community customer conversion.</p>
+                </div>
+                <ul class="tier-features-list">
+                    <li><span>20</span> Strategic Curated Posts</li>
+                    <li><span>12</span> High-Yield Cinematic Reels</li>
+                    <li>Daily Stories & Engagement Management</li>
+                    <li>Full Dedicated Community Management</li>
+                    <li>Monthly On-Site Content Creation Day</li>
+                    <li>In-Depth Competitor Analytics Research</li>
+                    <li>Custom Scale & Growth Blueprint Strategy</li>
+                </ul>
+                <a href="#consultation" class="btn-tier-action primary-tier-btn">Get Started</a>
+            </div>
+
+            <div class="price-tier-card">
+                <div class="tier-header">
+                    <h3>Website Design</h3>
+                    <div class="tier-price">Custom Architecture</div>
+                    <p class="tier-brief">Elite, hand-coded front-end builds optimized perfectly for lightning-fast client bookings.</p>
+                </div>
+                <div class="web-sub-pricing-stack">
+                    <div class="web-price-item">
+                        <div class="web-meta">
+                            <h4>Landing Page</h4>
+                            <p>Sleek single-page conversion asset.</p>
+                        </div>
+                        <div class="web-cost">$997</div>
+                    </div>
+                    <div class="web-price-item">
+                        <div class="web-meta">
+                            <h4>Business Website</h4>
+                            <p>Multi-page elite brand authority hub.</p>
+                        </div>
+                        <div class="web-cost">$1,997 - $2,997</div>
+                    </div>
+                    <div class="web-price-item">
+                        <div class="web-meta">
+                            <h4>Ecommerce Website</h4>
+                            <p>Heavy-duty commercial inventory storefront.</p>
+                        </div>
+                        <div class="web-cost">$3,500 - $6,000+</div>
+                    </div>
+                </div>
+                <a href="#consultation" class="btn-tier-action">Inquire Plan</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer id="consultation" class="master-footer-frame">
+    <div class="container-inner">
+        <div class="footer-cta-block">
+            <h2>Book A Free Consultation</h2>
+            <p>Ready to scale your brand? Drop us a line directly and let's construct your pipeline.</p>
+            <a href="mailto:customexclusivesocials@gmail.com" class="footer-email-link">customexclusivesocials@gmail.com</a>
+        </div>
+
+        <div class="footer-bottom-bar">
+            <p class="copyright-txt">&copy; 2026 Custom Exclusive Socials. All rights reserved.</p>
+            <p class="footer-motto">Elevating digital brands through strategic design.</p>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
-<script src="script.js"></script>
