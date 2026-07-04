@@ -1,70 +1,3 @@
-/* ===== PHASE 2 MOTION + POLISH ===== */
-
-body {
-  cursor: none;
-}
-
-/* CUSTOM CURSOR */
-.cursor {
-  width: 10px;
-  height: 10px;
-  background: #8A5A3B;
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-}
-
-/* CARD HOVER DEPTH */
-.card {
-  transition: all 0.4s ease;
-  cursor: pointer;
-}
-
-.card:hover {
-  transform: translateY(-12px) scale(1.01);
-}
-
-/* TEXT REVEAL */
-.reveal-text {
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-/* MODAL */
-.modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  background: #FBF9F5;
-  padding: 40px;
-  width: 70%;
-}
-
-/* BEFORE AFTER SLIDER */
-.slider {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.slider img {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.range {
-  width: 100%;
-  margin-top: 300px;
-}
 /* ==========================================================================
    1. MASTER SYSTEM DESIGN RULES & RE-SANITIZATION
    ========================================================================== */
@@ -910,4 +843,71 @@ body {
   .grid {
     grid-template-columns: 1fr;
   }
+}
+/* ===== PHASE 2 MOTION + POLISH ===== */
+
+body {
+  cursor: none;
+}
+
+/* CUSTOM CURSOR */
+.cursor {
+  width: 10px;
+  height: 10px;
+  background: #8A5A3B;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* CARD HOVER DEPTH */
+.card {
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.01);
+}
+
+/* TEXT REVEAL */
+.reveal-text {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #FBF9F5;
+  padding: 40px;
+  width: 70%;
+}
+
+/* BEFORE AFTER SLIDER */
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.range {
+  width: 100%;
+  margin-top: 300px;
 }
