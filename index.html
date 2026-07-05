@@ -424,6 +424,16 @@
                     </div>
                     <button type="submit" class="btn-primary form-submit-btn">Send My Free Request</button>
                     <p class="form-disclaimer">Submitting opens a pre-filled email to our team — no account or payment required.</p>
+
+                    <div id="quoteFormResult" class="quote-form-result">
+                        <p class="quote-result-title">✓ Your request is ready.</p>
+                        <p class="quote-result-copy">
+                            If your email app didn't open automatically, click below — or copy your details and paste them into any email.
+                        </p>
+                        <a id="quoteMailtoFallback" href="#" class="btn-outline-clay quote-result-btn">Open Email to Send It</a>
+                        <button type="button" id="quoteCopyBtn" class="btn-secondary quote-result-btn">Copy My Details</button>
+                        <textarea id="quoteCopyText" class="quote-copy-text" readonly></textarea>
+                    </div>
                 </form>
             </div>
 
@@ -455,17 +465,51 @@
         var interest = document.getElementById('qInterest').value;
         var message = document.getElementById('qMessage').value;
 
-        var subject = encodeURIComponent(interest + ' Request — ' + (business || name));
-        var body = encodeURIComponent(
+        var plainBody =
             'Name: ' + name + '\n' +
             'Email: ' + email + '\n' +
             'Business: ' + business + '\n' +
             'Current Website: ' + website + '\n' +
             'Interested In: ' + interest + '\n\n' +
-            'Message:\n' + message
-        );
+            'Message:\n' + message;
 
-        window.location.href = 'mailto:customexclusivesocials@gmail.com?subject=' + subject + '&body=' + body;
+        var subject = encodeURIComponent(interest + ' Request — ' + (business || name));
+        var body = encodeURIComponent(plainBody);
+        var mailtoLink = 'mailto:customexclusivesocials@gmail.com?subject=' + subject + '&body=' + body;
+
+        // Always show on-page confirmation + fallback, regardless of whether a mail app opens
+        var resultBox = document.getElementById('quoteFormResult');
+        var fallbackLink = document.getElementById('quoteMailtoFallback');
+        var copyText = document.getElementById('quoteCopyText');
+
+        fallbackLink.href = mailtoLink;
+        copyText.value = 'To: customexclusivesocials@gmail.com\nSubject: ' + interest + ' Request — ' + (business || name) + '\n\n' + plainBody;
+        resultBox.classList.add('visible');
+        resultBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        // Attempt to open the visitor's default mail app automatically
+        window.location.href = mailtoLink;
+    });
+
+    document.getElementById('quoteCopyBtn').addEventListener('click', function () {
+        var copyText = document.getElementById('quoteCopyText');
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        var btn = document.getElementById('quoteCopyBtn');
+        function showCopied() {
+            var original = btn.textContent;
+            btn.textContent = 'Copied ✓';
+            setTimeout(function () { btn.textContent = original; }, 2000);
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(copyText.value).then(showCopied).catch(function () {
+                document.execCommand('copy');
+                showCopied();
+            });
+        } else {
+            document.execCommand('copy');
+            showCopied();
+        }
     });
 </script>
 </body>
