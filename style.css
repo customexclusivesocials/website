@@ -706,6 +706,118 @@ p {
 .btn-tier-action.primary-tier-btn:hover { background: var(--clay-deep); }
 
 /* ==========================================================================
+   7.5 FREE QUOTE / WEBSITE ANALYSIS FORM
+   ========================================================================== */
+.quote-form-section {
+    padding: 120px 0;
+    border-top: 1px solid var(--line);
+}
+
+.quote-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 70px;
+    align-items: start;
+}
+
+.quote-intro h2 { margin-bottom: 22px; }
+.quote-intro p { font-size: 1.02rem; margin-bottom: 30px; max-width: 46ch; }
+
+.quote-points {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.quote-points li {
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    padding-left: 26px;
+    position: relative;
+}
+
+.quote-points li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--clay);
+    font-weight: 700;
+}
+
+.quote-form-card {
+    background: var(--warm-white);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 44px;
+    box-shadow: 0 20px 50px rgba(33, 26, 20, 0.06);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-field { margin-bottom: 22px; }
+
+.form-field label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--stone);
+    margin-bottom: 8px;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--line);
+    padding: 10px 2px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.98rem;
+    color: var(--ink);
+    transition: border-color 0.3s ease;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    outline: none;
+    border-color: var(--clay);
+}
+
+.form-field textarea { resize: vertical; min-height: 90px; }
+
+.form-field select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%238A5A3B'%3E%3Cpath d='M5.5 7.5l4.5 4.5 4.5-4.5' stroke='%238A5A3B' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 2px center;
+    background-size: 16px;
+    padding-right: 24px;
+}
+
+.form-submit-btn {
+    width: 100%;
+    border: none;
+    margin-top: 6px;
+}
+
+.form-disclaimer {
+    font-size: 0.78rem;
+    color: var(--stone);
+    text-align: center;
+    margin-top: 14px;
+}
+
+/* ==========================================================================
    8. SIGNATURE CONVERSION FOOTER
    ========================================================================== */
 .master-footer-frame {
@@ -742,6 +854,7 @@ p {
     .full-width-card { grid-column: span 1; }
     .horizontal-steps { grid-template-columns: 1fr; gap: 16px; }
     .pricing-cards-container { grid-template-columns: 1fr; max-width: 600px; margin: 0 auto; }
+    .quote-grid { grid-template-columns: 1fr; gap: 44px; }
 }
 
 @media (max-width: 768px) {
@@ -752,4 +865,6 @@ p {
     .price-tier-card { padding: 36px 24px; }
     .footer-email-link { font-size: 1.4rem; }
     .footer-bottom-bar { flex-direction: column; gap: 12px; text-align: center; }
+    .form-row { grid-template-columns: 1fr; }
+    .quote-form-card { padding: 30px 24px; }
 }
