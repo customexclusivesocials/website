@@ -937,7 +937,7 @@ body {
     gap: 12px;
 }
 /* ==========================================================================
-   AI AUTOMATION SECTION (ISOLATED RULES)
+   AI AUTOMATION SECTION (CORRECTED & ISOLATED)
    ========================================================================== */
 
 .automation-integration-section {
@@ -959,8 +959,8 @@ body {
     align-items: center;
 }
 
-/* Medium-Large Desktop Media Query for Split Layout */
-@min-width: 992px {
+/* FIXED: Correct syntax wrapper for desktop layout split */
+@media (min-width: 992px) {
     .automation-container-inner {
         flex-direction: row;
         justify-content: space-between;
@@ -977,7 +977,6 @@ body {
     }
 }
 
-/* Typography & Content Styling */
 .automation-tag-wrapper {
     margin-bottom: 20px;
 }
@@ -987,7 +986,7 @@ body {
     text-transform: uppercase;
     font-size: 11px;
     letter-spacing: 2px;
-    color: #4361ee; /* Premium tech blue accent */
+    color: #4361ee;
     font-weight: 600;
     background: rgba(67, 97, 238, 0.08);
     padding: 6px 14px;
@@ -1033,7 +1032,6 @@ body {
     font-weight: 500;
 }
 
-/* Strict Image Containment Architecture */
 .automation-graphic-wrapper {
     width: 100%;
     display: flex;
@@ -1043,7 +1041,7 @@ body {
 
 .automation-image-frame {
     width: 100%;
-    max-width: 640px; /* Controls image blowing up too large */
+    max-width: 640px;
     position: relative;
     border-radius: 16px;
     overflow: hidden;
@@ -1056,10 +1054,9 @@ body {
     width: 100%;
     height: auto;
     display: block;
-    object-fit: contain; /* Guarantees the built-in text graphics never clip */
+    object-fit: contain;
 }
 
-/* Ambient glow accent that subtly ties into the graphic's lighting */
 .automation-ambient-glow {
     position: absolute;
     top: -20%;
