@@ -366,6 +366,71 @@
     </div>
 </section>
 
+<section id="get-quote" class="quote-form-section">
+    <div class="container-inner">
+        <div class="quote-grid">
+
+            <div class="quote-intro">
+                <span class="section-tag">Free Quote</span>
+                <h2>Get a Free Quote or Website Analysis</h2>
+                <p>
+                    Tell us a bit about your business and what you're looking for. We'll take a look at your current
+                    website or social presence and send back a straightforward breakdown of what's working, what's not,
+                    and what it would take to fix it — no pressure, no obligation.
+                </p>
+                <ul class="quote-points">
+                    <li>Response within 1–2 business days</li>
+                    <li>Honest feedback, even if that means telling you what's already working</li>
+                    <li>No cost, no commitment</li>
+                </ul>
+            </div>
+
+            <div class="quote-form-card">
+                <form id="quoteForm" class="quote-form">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="qName">Full Name</label>
+                            <input type="text" id="qName" name="qName" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="qEmail">Email</label>
+                            <input type="email" id="qEmail" name="qEmail" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="qBusiness">Business Name</label>
+                            <input type="text" id="qBusiness" name="qBusiness">
+                        </div>
+                        <div class="form-field">
+                            <label for="qWebsite">Current Website (if any)</label>
+                            <input type="text" id="qWebsite" name="qWebsite" placeholder="e.g. yourbusiness.com">
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label for="qInterest">What are you looking for?</label>
+                        <select id="qInterest" name="qInterest">
+                            <option>Free Website Analysis</option>
+                            <option>Free Quote — Web Design</option>
+                            <option>Free Quote — Social Media Management</option>
+                            <option>Free Quote — Branding</option>
+                            <option>Free Quote — Full Digital Package</option>
+                            <option>Not Sure Yet</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="qMessage">Anything else we should know?</label>
+                        <textarea id="qMessage" name="qMessage" rows="4" placeholder="Tell us about your business, goals, or what's not working right now."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary form-submit-btn">Send My Free Request</button>
+                    <p class="form-disclaimer">Submitting opens a pre-filled email to our team — no account or payment required.</p>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 <footer id="consultation" class="master-footer-frame">
     <div class="container-inner">
         <div class="footer-cta-block">
@@ -380,5 +445,28 @@
         </div>
     </div>
 </footer>
+<script>
+    document.getElementById('quoteForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        var name = document.getElementById('qName').value;
+        var email = document.getElementById('qEmail').value;
+        var business = document.getElementById('qBusiness').value;
+        var website = document.getElementById('qWebsite').value;
+        var interest = document.getElementById('qInterest').value;
+        var message = document.getElementById('qMessage').value;
+
+        var subject = encodeURIComponent(interest + ' Request — ' + (business || name));
+        var body = encodeURIComponent(
+            'Name: ' + name + '\n' +
+            'Email: ' + email + '\n' +
+            'Business: ' + business + '\n' +
+            'Current Website: ' + website + '\n' +
+            'Interested In: ' + interest + '\n\n' +
+            'Message:\n' + message
+        );
+
+        window.location.href = 'mailto:customexclusivesocials@gmail.com?subject=' + subject + '&body=' + body;
+    });
+</script>
 </body>
 </html>
