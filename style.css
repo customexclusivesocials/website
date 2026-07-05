@@ -666,7 +666,7 @@ p {
 }
 
 .tier-features-list li { font-size: 0.95rem; color: var(--ink-soft); display: flex; align-items: center; }
-.tier-features-list li::before { content: "✓"; color: var(--clay); font-weight: bold; margin-right: 14px; }
+.tier-features-list li::before { content: "âœ“"; color: var(--clay); font-weight: bold; margin-right: 14px; }
 .tier-features-list li span { font-weight: 700; color: var(--ink); margin-right: 4px; }
 
 /* Sub-pricing item matrices for custom websites */
@@ -738,7 +738,7 @@ p {
 }
 
 .quote-points li::before {
-    content: "✓";
+    content: "âœ“";
     position: absolute;
     left: 0;
     color: var(--clay);
