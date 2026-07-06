@@ -197,6 +197,151 @@
 
   </div>
 </section>
+    <!-- START OF PORTFOLIO CAROUSEL BANNER SECTION -->
+<style>
+  /* All styles are nested and prefixed so they won't conflict with your current site */
+  .mockup-banner-section {
+    padding: 60px 20px;
+    background-color: #fafafa; 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: block !important; /* Forces the section to render */
+    clear: both;
+  }
+
+  .banner-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .banner-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .banner-header h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  .banner-header p {
+    font-size: 1rem;
+    color: #666;
+    font-weight: 300;
+  }
+
+  /* Container holding the track */
+  .carousel-wrapper {
+    position: relative;
+    max-width: 950px;
+    margin: 0 auto;
+  }
+
+  /* CSS-Only Scroll Container */
+  .carousel-track-container {
+    display: flex !important;
+    overflow-x: auto !important;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    background: #ffffff;
+    
+    /* Hides default scrollbars for a clean presentation */
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+  }
+
+  .carousel-track-container::-webkit-scrollbar {
+    display: none; 
+  }
+
+  /* Slide Sizing */
+  .carousel-slide {
+    min-width: 100% !important;
+    max-width: 100% !important;
+    scroll-snap-align: start;
+    box-sizing: border-box;
+    flex-shrink: 0;
+  }
+
+  .carousel-slide img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: cover;
+  }
+
+  /* Navigation Dots */
+  .carousel-nav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+  }
+
+  .indicator-link {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .indicator-link:hover {
+    background-color: #a39081; 
+    transform: scale(1.2);
+  }
+</style>
+
+<section class="mockup-banner-section">
+  <div class="banner-container">
+    
+    <div class="banner-header">
+      <h2>Digital Design Portfolio</h2>
+      <p>A curated showcase of bespoke web design and branding client mockups.</p>
+    </div>
+
+    <div class="carousel-wrapper">
+      <div class="carousel-track-container">
+        
+        <!-- Individual Slides matching your filenames -->
+        <div class="carousel-slide" id="slide-1">
+          <img src="trifoldmockup1Medium.jpeg" alt="Premium Trifold Brochure Design Mockup">
+        </div>
+        
+        <div class="carousel-slide" id="slide-2">
+          <img src="weddesignclients1.png" alt="Desktop Web Design Client Showcase 1">
+        </div>
+        
+        <div class="carousel-slide" id="slide-3">
+          <img src="weddesignclients2.png" alt="Desktop Web Design Client Showcase 2">
+        </div>
+        
+        <div class="carousel-slide" id="slide-4">
+          <img src="weddesignclients3.png" alt="Desktop Web Design Client Showcase 3">
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Navigation controls linking to element IDs -->
+    <div class="carousel-nav">
+      <a href="#slide-1" class="indicator-link" title="Slide 1"></a>
+      <a href="#slide-2" class="indicator-link" title="Slide 2"></a>
+      <a href="#slide-3" class="indicator-link" title="Slide 3"></a>
+      <a href="#slide-4" class="indicator-link" title="Slide 4"></a>
+    </div>
+
+  </div>
+</section>
+<!-- END OF PORTFOLIO CAROUSEL BANNER SECTION -->
 
 <section class="production-vault-section">
     <div class="container-inner">
