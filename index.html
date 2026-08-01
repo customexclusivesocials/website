@@ -38,24 +38,55 @@
     }
 </style>
 
-<header style="position: sticky; top: 0; width: 100%; background-color: rgba(0, 0, 0, 0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid #171717; z-index: 9999; padding: 18px 0;">
+<!-- START: UPDATED HEADER NAVIGATION -->
+<style>
+    .nav-link-item {
+        color: #a3a3a3;
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: color 0.25s ease;
+    }
+    .nav-link-item:hover {
+        color: #ffffff;
+    }
+    .nav-cta-btn {
+        display: inline-block;
+        background-color: #3b82f6;
+        color: #ffffff;
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: none;
+        padding: 10px 22px;
+        border-radius: 6px;
+        transition: background-color 0.25s ease, transform 0.2s ease;
+    }
+    .nav-cta-btn:hover {
+        background-color: #2563eb;
+        transform: translateY(-1px);
+    }
+</style>
+
+<header style="position: sticky; top: 0; width: 100%; background-color: rgba(5, 5, 5, 0.85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid #1f1f1f; z-index: 9999; padding: 18px 0;">
     <div style="max-width: 1200px; margin: 0 auto; padding: 0 40px; display: flex; align-items: center; justify-content: space-between;">
         
-        <!-- Brand Identity Architecture -->
+        <!-- Brand Identity Logo -->
         <a href="#" style="color: #ffffff; font-size: 18px; font-weight: 700; text-decoration: none; letter-spacing: -0.02em;">
             Custom Exclusive Socials<span style="color: #3b82f6;">.</span>
         </a>
 
         <!-- Live Section Anchor Links -->
-        <nav style="display: flex; align-items: center; gap: 32px;">
+        <nav style="display: flex; align-items: center; gap: 28px;">
             <a href="#portfolio" class="nav-link-item">Portfolio</a>
-            <a href="#pricing" class="nav-link-item">Pricing</a>
-            <a href="#about-founder" class="nav-link-item">About</a>
-            <a href="#consultation" class="nav-cta-btn">Book Consultation</a>
+            <a href="#clients" class="nav-link-item">Clients</a>
+            <a href="#branding" class="nav-link-item">Branding</a>
+            <a href="#about-us" class="nav-link-item">About us</a>
+            <a href="#contact" class="nav-cta-btn">Contact form</a>
         </nav>
 
     </div>
 </header>
+<!-- END: UPDATED HEADER NAVIGATION -->
 
 
   <section class="hero-video-section">
@@ -171,7 +202,103 @@
                 </blockquote>
             </div>
         </div>
+<!-- START: BRANDING & TYPOGRAPHY SHOWCASE SECTION -->
+<section id="branding" class="branding-showcase-section" style="background-color: #080808; padding: 100px 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a;">
+    <div class="container-inner" style="max-width: 1200px; margin: 0 auto; padding: 0 40px;">
+        
+        <!-- Section Header -->
+        <div style="margin-bottom: 60px;">
+            <span style="font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #3b82f6; background-color: rgba(59, 130, 246, 0.1); padding: 6px 12px; border-radius: 20px; display: inline-block; margin-bottom: 16px;">
+                Visual Identity & Type Systems
+            </span>
+            <h2 style="font-size: 38px; font-weight: 700; color: #ffffff; margin-bottom: 12px; letter-spacing: -0.02em;">
+                Branding & Editorial Typography
+            </h2>
+            <p style="font-size: 16px; color: #a3a3a3; max-width: 720px; line-height: 1.6;">
+                Bespoke brand identities, high-contrast logotypes, and curated editorial type systems tailored for luxury aesthetic clinics, modern beauty labels, and elevated visual suites.
+            </p>
+        </div>
 
+        <!-- Branding Showcase Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 28px;">
+
+            <!-- CARD 1: NORDA BRANDING KIT -->
+            <div style="background: #0f0f0f; border: 1px solid #1f1f1f; border-radius: 12px; overflow: hidden; transition: border-color 0.3s ease;">
+                <div style="aspect-ratio: 4/3; overflow: hidden; background-color: #141414;">
+                    <img src="Screenshot 2026-07-31 at 9.33.29 PM.png" alt="NORDA Botanical Skincare Brand Identity Kit" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                </div>
+                <div style="padding: 24px;">
+                    <span style="font-size: 11px; color: #3b82f6; text-transform: uppercase; font-weight: 600; letter-spacing: 1px;">Brand Kit & Submarks</span>
+                    <h3 style="color: #ffffff; font-size: 20px; margin: 8px 0 6px 0; font-weight: 600;">NORDA Skincare Identity</h3>
+                    <p style="color: #8a8a8a; font-size: 14px; line-height: 1.5; margin: 0;">Full-suite branding system featuring custom primary logotypes, oval submarks, and botanical packaging visual guidelines.</p>
+                </div>
+            </div>
+
+            <!-- CARD 2: ETHIC SERIF -->
+            <div style="background: #0f0f0f; border: 1px solid #1f1f1f; border-radius: 12px; overflow: hidden;">
+                <div style="aspect-ratio: 4/3; overflow: hidden; background-color: #141414;">
+                    <img src="040ad31be032c02d39b3a0508009a9ee.jpg" alt="Ethic Serif Display Typeface Showcase" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                </div>
+                <div style="padding: 24px;">
+                    <span style="font-size: 11px; color: #3b82f6; text-transform: uppercase; font-weight: 600; letter-spacing: 1px;">Display Serif System</span>
+                    <h3 style="color: #ffffff; font-size: 20px; margin: 8px 0 6px 0; font-weight: 600;">Ethic Display Serif</h3>
+                    <p style="color: #8a8a8a; font-size: 14px; line-height: 1.5; margin: 0;">Six-weight display serif suite engineered for editorial headlines, high-end branding layouts, and modern luxury collateral.</p>
+                </div>
+            </div>
+
+            <!-- CARD 3: NOOR HAIR BRANDING -->
+            <div style="background: #0f0f0f; border: 1px solid #1f1f1f; border-radius: 12px; overflow: hidden;">
+                <div style="aspect-ratio: 4/3; overflow: hidden; background-color: #141414;">
+                    <img src="Screenshot 2026-07-31 at 9.33.04 PM.png" alt="NOOR Hair Visual Identity Mark" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                </div>
+                <div style="padding: 24px;">
+                    <span style="font-size: 11px; color: #3b82f6; text-transform: uppercase; font-weight: 600; letter-spacing: 1px;">Luxury Logotype</span>
+                    <h3 style="color: #ffffff; font-size: 20px; margin: 8px 0 6px 0; font-weight: 600;">NOOR Hair Aesthetics</h3>
+                    <p style="color: #8a8a8a; font-size: 14px; line-height: 1.5; margin: 0;">Minimalist interlocking typographic logo overlay crafted for high-end hair extensions, salon portfolios, and editorial imagery.</p>
+                </div>
+            </div>
+
+            <!-- CARD 4: VONCA MINIMALIST FONT FAMILY -->
+            <div style="background: #0f0f0f; border: 1px solid #1f1f1f; border-radius: 12px; overflow: hidden;">
+                <div style="aspect-ratio: 4/3; overflow: hidden; background-color: #141414;">
+                    <img src="ebdb7bdc3ff7bb41cc331b9b780d5bca.jpg" alt="VONCA Minimalist Font Family Suite" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                </div>
+                <div style="padding: 24px;">
+                    <span style="font-size: 11px; color: #3b82f6; text-transform: uppercase; font-weight: 600; letter-spacing: 1px;">Architectural Typography</span>
+                    <h3 style="color: #ffffff; font-size: 20px; margin: 8px 0 6px 0; font-weight: 600;">VONCA Type Suite</h3>
+                    <p style="color: #8a8a8a; font-size: 14px; line-height: 1.5; margin: 0;">7-style minimalist font family featuring architectural glyphs, alternate ligatures, and clean geometric structures.</p>
+                </div>
+            </div>
+
+            <!-- CARD 5: VANIA SERIF -->
+            <div style="background: #0f0f0f; border: 1px solid #1f1f1f; border-radius: 12px; overflow: hidden;">
+                <div style="aspect-ratio: 4/3; overflow: hidden; background-color: #141414;">
+                    <img src="Screenshot 2026-07-31 at 9.32.57 PM.png" alt="Vania Modern Stylish Serif" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                </div>
+                <div style="padding: 24px;">
+                    <span style="font-size: 11px; color: #3b82f6; text-transform: uppercase; font-weight: 600; letter-spacing: 1px;">Modern High-Contrast Serif</span>
+                    <h3 style="color: #ffffff; font-size: 20px; margin: 8px 0 6px 0; font-weight: 600;">Vania Editorial Serif</h3>
+                    <p style="color: #8a8a8a; font-size: 14px; line-height: 1.5; margin: 0;">Curvaceous, high-contrast display serif designed for luxury skincare positioning, brand identities, and promotional assets.</p>
+                </div>
+            </div>
+
+            <!-- CARD 6: ESTETIKA MAISON -->
+            <div style="background: #0f0f0f; border: 1px solid #1f1f1f; border-radius: 12px; overflow: hidden;">
+                <div style="aspect-ratio: 4/3; overflow: hidden; background-color: #141414;">
+                    <img src="Screenshot 2026-07-31 at 9.34.01 PM.png" alt="Estetika Maison Editorial Serif Typeface" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                </div>
+                <div style="padding: 24px;">
+                    <span style="font-size: 11px; color: #3b82f6; text-transform: uppercase; font-weight: 600; letter-spacing: 1px;">Editorial Typeface</span>
+                    <h3 style="color: #ffffff; font-size: 20px; margin: 8px 0 6px 0; font-weight: 600;">Estetika Maison</h3>
+                    <p style="color: #8a8a8a; font-size: 14px; line-height: 1.5; margin: 0;">Sophisticated editorial typeface complete with regular, italic, and ruged variations for high-end studio branding.</p>
+                </div>
+            </div>
+
+        </div> <!-- /Grid -->
+
+    </div>
+</section>
+<!-- END: BRANDING & TYPOGRAPHY SHOWCASE SECTION -->
     </div>
 </section>
 <!-- END: ABOUT FOUNDER SECTION -->
@@ -240,34 +367,6 @@
   }
 </style>
 
-<section class="ai-tools-showcase-section">
-  <div class="ai-tools-container">
-    
-    <!-- Text portion of the section -->
-    <div class="ai-tools-header">
-      <h2>AI Plug-&-Play Integrations</h2>
-      <p>Elevate client engagement and automate lead conversion with high-end, interactive artificial intelligence modules built directly for modern medical aesthetic websites.</p>
-    </div>
-
-    <!-- Consolidated visual presentation display -->
-    <div class="ai-tools-banner-wrapper">
-      <img 
-        src="aiplugandplaytools.png" 
-        alt="AI Plug and Play Interactive Medical Aesthetic Modules Showcase" 
-        class="ai-tools-banner-image"
-      >
-    </div>
-
-  </div>
-</section>
-<!-- END OF AI PLUG-AND-PLAY TOOLS SHOWCASE SECTION -->
-<section id="portfolio" class="portfolio-interactive-section">
-    <div class="container-inner">
-
-        <div class="section-header-minimal">
-            <span class="section-tag">Case Studies</span>
-            <h2>Selected Digital Assets</h2>
-        </div>
 
         <div class="portfolio-grid-interactive">
 
