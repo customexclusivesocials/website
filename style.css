@@ -48,6 +48,120 @@ header, section, footer {
     margin: 0 auto;
     padding: 0 4%;
 }
+<style>
+    /* Prevent horizontal page blowing out on mobile */
+    html, body {
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+
+    /* Header scroll offset for sticky navbar */
+    section, div[id] {
+        scroll-margin-top: 90px;
+    }
+
+    /* Base Navigation */
+    .site-header {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        background-color: rgba(5, 5, 5, 0.90);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid #1f1f1f;
+        z-index: 9999;
+        padding: 16px 0;
+    }
+
+    .header-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-links-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .nav-link-item {
+        color: #a3a3a3;
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: color 0.25s ease;
+    }
+    .nav-link-item:hover { color: #ffffff; }
+
+    .nav-cta-btn {
+        display: inline-block;
+        background-color: #3b82f6;
+        color: #ffffff;
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: none;
+        padding: 9px 18px;
+        border-radius: 6px;
+        white-space: nowrap;
+        transition: background-color 0.25s ease;
+    }
+    .nav-cta-btn:hover { background-color: #2563eb; }
+
+    /* Responsive Grid Layouts */
+    .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 28px;
+    }
+
+    /* ==========================================
+       MOBILE BREAKPOINTS (Max-Width: 868px)
+       ========================================== */
+    @media (max-width: 868px) {
+        section, div[id] {
+            scroll-margin-top: 130px;
+        }
+
+        .header-inner {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 0 20px;
+        }
+
+        /* Enables horizontal touch swiping for nav menu on mobile */
+        .nav-links-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 6px;
+            gap: 18px;
+        }
+
+        .nav-links-wrapper::-webkit-scrollbar {
+            display: none;
+        }
+
+        .portfolio-grid {
+            grid-template-columns: 1fr !important; /* Stack items 1-column on mobile */
+            gap: 24px;
+        }
+
+        .mobile-padding {
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+        }
+
+        .mobile-heading {
+            font-size: 28px !important;
+        }
+    }
+</style>
 
 /* Clear Headings System */
 h2 {
