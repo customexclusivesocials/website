@@ -6,6 +6,17 @@
     <title>Custom Exclusive Socials</title>
     <link rel="stylesheet" href="style.css">
     <meta name="google-site-verification" content="w6v9uxVS6c3SQB7-uvTujgfhcB_CRS2YxHGIJM6AhlQ" />
+    <style>
+    /* Enables smooth scrolling across the entire page */
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* Prevents the sticky navigation bar from covering the top of sections when jumping */
+    section, div[id] {
+        scroll-margin-top: 90px;
+    }
+</style>
 </head>
 <body>
 <!-- START: MASTER NAVIGATION HEADER -->
@@ -38,7 +49,7 @@
     }
 </style>
 
-<!-- START: UPDATED HEADER NAVIGATION WITH AI TOOLS -->
+<!-- START: FIXED HEADER NAVIGATION -->
 <style>
     .nav-link-item {
         color: #a3a3a3;
@@ -81,14 +92,13 @@
             <a href="#clients" class="nav-link-item">Clients</a>
             <a href="#branding" class="nav-link-item">Branding</a>
             <a href="#ai-tools" class="nav-link-item">AI Tools</a>
-            <a href="#about-us" class="nav-link-item">About us</a>
-            <a href="#contact" class="nav-cta-btn">Contact form</a>
+            <a href="#about" class="nav-link-item">About us</a>
+            <a href="#quote" class="nav-cta-btn">Contact form</a>
         </nav>
 
     </div>
 </header>
-<!-- END: UPDATED HEADER NAVIGATION -->
-
+<!-- END: FIXED HEADER NAVIGATION -->
   <section class="hero-video-section">
         <div class="hero-content-wrapper">
             <div class="agency-tag-frame">
@@ -859,7 +869,8 @@
         </div>
     </div>
 </section>
-
+<!-- START: FREE QUOTE & CONTACT FORM SECTION -->
+<section id="quote" style="background-color: #f5f2eb; padding: 100px 0;">
 <section id="get-quote" class="quote-form-section">
     <div class="container-inner">
         <div class="quote-grid">
@@ -934,7 +945,7 @@
         </div>
     </div>
 </section>
-
+<!-- END: FREE QUOTE & CONTACT FORM SECTION -->
 
 <footer id="consultation" class="master-footer-frame">
     <div class="container-inner">
