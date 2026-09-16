@@ -218,6 +218,29 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
 .service-card:hover .service-link{gap:10px;}
 @media(max-width:900px){.services-grid{grid-template-columns:1fr;}}
 
+/* ============ PROCESS ============ */
+.process{padding:120px 0;background:var(--charcoal-2);border-top:1px solid var(--border-dark);border-bottom:1px solid var(--border-dark);position:relative;overflow:hidden;}
+.process-list{position:relative;max-width:900px;margin:0 auto;}
+.process-list::before{content:'';position:absolute;top:8px;bottom:8px;left:31px;width:1px;background:linear-gradient(180deg,rgba(99,102,241,0.5),rgba(16,185,129,0.5) 50%,rgba(99,102,241,0.1));}
+.process-step{position:relative;display:flex;gap:28px;padding:0 0 52px 0;}
+.process-step:last-child{padding-bottom:0;}
+.process-num{
+  flex-shrink:0;width:64px;height:64px;border-radius:16px;
+  background:var(--charcoal);border:1px solid var(--border-dark-strong);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-display);font-size:19px;font-weight:700;color:var(--indigo-light);
+  position:relative;z-index:1;transition:border-color .3s,color .3s,background .3s;
+}
+.process-step:hover .process-num{border-color:var(--indigo);background:rgba(99,102,241,0.12);color:#fff;}
+.process-body{padding-top:10px;}
+.process-body h3{font-size:20px;margin-bottom:8px;}
+.process-body p{font-size:14.5px;color:var(--muted-light);max-width:520px;}
+@media(max-width:640px){
+  .process-list::before{left:23px;}
+  .process-num{width:48px;height:48px;font-size:15px;border-radius:12px;}
+  .process-step{gap:18px;}
+}
+
 /* ============ AUTOMATION FEATURE ============ */
 .automation-feature{padding:100px 0;background:var(--charcoal-2);border-top:1px solid var(--border-dark);border-bottom:1px solid var(--border-dark);}
 .automation-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
@@ -508,6 +531,61 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
   </div>
 </section>
 
+<!-- ============ PROCESS ============ -->
+<section class="process">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow" style="margin-left:auto;margin-right:auto;"><span class="dot"></span>Our Process</span>
+      <h2>From Vision to Digital Presence</h2>
+      <p style="margin:0 auto;">Your website is more than just a collection of pages. It's an extension of your business, your brand, and the experience you want to create for your customers. Our process is designed to make every stage intentional, collaborative, and aligned with your vision.</p>
+    </div>
+    <div class="process-list">
+      <div class="process-step reveal">
+        <div class="process-num">01</div>
+        <div class="process-body">
+          <h3>Discover</h3>
+          <p>We begin by getting to know your business, your audience, and what you want your website to accomplish.</p>
+        </div>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-num">02</div>
+        <div class="process-body">
+          <h3>Strategize</h3>
+          <p>Together, we establish the foundation of your website — from structure and functionality to content and overall direction.</p>
+        </div>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-num">03</div>
+        <div class="process-body">
+          <h3>Design</h3>
+          <p>Your vision takes shape through a custom, intentional design that reflects your brand and connects with your ideal audience.</p>
+        </div>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-num">04</div>
+        <div class="process-body">
+          <h3>Develop</h3>
+          <p>Once the direction is approved, we bring your website to life with responsive, user-friendly development across all devices.</p>
+        </div>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-num">05</div>
+        <div class="process-body">
+          <h3>Refine</h3>
+          <p>Through collaboration and feedback, we fine-tune the details to ensure your website feels exactly right.</p>
+        </div>
+      </div>
+      <div class="process-step reveal">
+        <div class="process-num">06</div>
+        <div class="process-body">
+          <h3>Launch</h3>
+          <p>Your new digital presence is finalized, optimized, and ready to welcome your audience.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ AUTOMATION FEATURE ============ -->
 <section class="automation-feature">
   <div class="container automation-grid">
@@ -741,7 +819,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
       <div class="price-card featured reveal">
         <span class="price-badge">Most Popular</span>
         <h3>Premium Social</h3>
-        <div class="price-amount">$800<span>/month</span></div>
+        <div class="price-amount">$500<span>&amp; up / month</span></div>
         <p class="price-brief">Full-service media takeover for maximum visibility and community-driven conversion.</p>
         <ul class="price-features">
           <li><i>✓</i> 20 strategic curated posts</li>
@@ -761,16 +839,16 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
         <p class="price-brief">Elite, hand-coded front-end builds optimized for lightning-fast client bookings.</p>
         <div class="web-tier-stack">
           <div class="web-tier-row">
-            <div><h4>Landing Page</h4><p>NEW unlimited custom pages Website Built for your Business .</p></div>
-            <div class="web-tier-cost">$400+</div>
+            <div><h4>Landing Page</h4><p>Sleek single-page conversion asset.</p></div>
+            <div class="web-tier-cost">$500+</div>
           </div>
           <div class="web-tier-row">
-            <div><h4>Website + Shopify Store Build</h4><p>Multi-page elite brand authority hub.</p></div>
-            <div class="web-tier-cost">$600+</div>
+            <div><h4>Business Website</h4><p>Multi-page elite brand authority hub.</p></div>
+            <div class="web-tier-cost">$1,000+</div>
           </div>
           <div class="web-tier-row">
             <div><h4>E-Commerce Website</h4><p>Heavy-duty commercial inventory storefront.</p></div>
-            <div class="web-tier-cost">$550</div>
+            <div class="web-tier-cost">$1,500–$2,000+</div>
           </div>
         </div>
         <a href="#quote" class="btn btn-secondary btn-block">Inquire About This Plan</a>
@@ -792,6 +870,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
         <li><i>✓</i> Honest feedback, even if that means telling you what's already working</li>
         <li><i>✓</i> No cost, no commitment</li>
       </ul>
+      <p style="margin-top:28px;font-size:14.5px;color:var(--ink-muted);">Prefer to talk it through? Call or text <a href="tel:+17055614388" style="color:var(--ink);font-weight:600;">(705) 561-4388</a>.</p>
     </div>
 
     <div class="form-card reveal">
@@ -847,15 +926,15 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
     <div class="faq-list">
       <div class="faq-item reveal">
         <button class="faq-q"><span>How long does a website take to build?</span><i>+</i></button>
-        <div class="faq-a"><div class="faq-a-inner">Most landing pages are ready in 1 week, and multi-page business websites typically take 1-2 weeks depending on content and revisions. E-commerce builds run longer since product catalogs and payment integration take more time to get right. You'll get a clear timeline before any work begins.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Most landing pages are ready in 1–2 weeks, and multi-page business websites typically take 2–4 weeks depending on content and revisions. E-commerce builds run longer since product catalogs and payment integration take more time to get right. You'll get a clear timeline before any work begins.</div></div>
       </div>
       <div class="faq-item reveal">
         <button class="faq-q"><span>Where is my website hosted, and who owns it?</span><i>+</i></button>
-        <div class="faq-a"><div class="faq-a-inner">Sites are built and coded fully and — with your custom domain connected through your registrar (like GoDaddy). You own the code and the domain outright; nothing is locked behind a proprietary builder.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Sites are built to run on GitHub Pages — fast, reliable, and free to host — with your custom domain connected through your registrar (like GoDaddy). You own the code and the domain outright; nothing is locked behind a proprietary builder.</div></div>
       </div>
       <div class="faq-item reveal">
         <button class="faq-q"><span>What does the Premium Social package actually include?</span><i>+</i></button>
-        <div class="faq-a"><div class="faq-a-inner">Premium Social covers 20 strategic posts and 12 cinematic reels per month, daily story and engagement management, full community management, a monthly on-site content day, competitor research, and a custom growth blueprint — everything needed to run your social presence hands-off. includes up to 3 social media platforms.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Premium Social covers 20 strategic posts and 12 cinematic reels per month, daily story and engagement management, full community management, a monthly on-site content day, competitor research, and a custom growth blueprint — everything needed to run your social presence hands-off.</div></div>
       </div>
       <div class="faq-item reveal">
         <button class="faq-q"><span>Do you work with businesses outside Niagara?</span><i>+</i></button>
@@ -878,6 +957,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
       <h2>Book A Free Consultation</h2>
       <p>Ready to scale your brand? Drop us a line directly and let's build your pipeline.</p>
       <a href="mailto:customexclusivesocials@gmail.com" class="footer-email">customexclusivesocials@gmail.com →</a>
+      <a href="tel:+17055614388" class="footer-email" style="display:block;margin-top:8px;font-size:16px;">(705) 561-4388</a>
     </div>
   </div>
 
@@ -905,6 +985,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
           <div class="footer-col">
             <h5>Contact</h5>
             <a href="mailto:customexclusivesocials@gmail.com">customexclusivesocials@gmail.com</a>
+            <a href="tel:+17055614388">(705) 561-4388</a>
             <a href="#quote">Get a free quote</a>
           </div>
         </div>
