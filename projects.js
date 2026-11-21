@@ -1,0 +1,266 @@
+/* ============================================================
+   CUSTOM EXCLUSIVE SOCIALS — PORTFOLIO DATA
+   ------------------------------------------------------------
+   HOW TO ADD A NEW CLIENT
+   1. Copy any block inside CES_PROJECTS and paste it at the end.
+   2. Change name, category, descriptor and url.
+   3. (Optional) drop a screenshot at images/portfolio/<slug>.jpg
+      and set "image" to that path. Until the file exists, a clean
+      branded preview is shown automatically.
+   4. (Optional) featured: true  -> large card on /portfolio
+                  home: true     -> shows in "Featured Work" on the homepage
+                  alsoIn: [...]  -> also appears under another filter
+   The filters, counts, cards and SEO markup all build themselves.
+   ============================================================ */
+
+window.CES_CATEGORIES = [
+  "Restaurants",
+  "Hair & Beauty",
+  "Bridal",
+  "Professional Services",
+  "Retail / E-Commerce"
+];
+
+/* Preview colours ("tone"): bg = background, fg = text, ac = accent. */
+window.CES_PROJECTS = [
+
+  /* ---------- FEATURED ---------- */
+  {
+    "name": "Mario's Place",
+    "category": "Restaurants",
+    "descriptor": "Custom Restaurant Website",
+    "summary": "A family-run Italian takeout and dining spot in downtown Welland, with menu, hours and catering details in one place.",
+    "url": "https://customexclusivesocials.github.io/marios-place/",
+    "image": "images/portfolio/marios-place.jpg",
+    "featured": true, "home": true,
+    "tone": { "bg": "#E7E2D9", "fg": "#1F1B16", "ac": "#6B5B45" }
+  },
+  {
+    "name": "Evelyn's Sandwich Factory",
+    "category": "Restaurants",
+    "descriptor": "Custom Restaurant Website",
+    "url": "https://customexclusivesocials.github.io/EvelynsSandwichFactory/",
+    "image": "images/portfolio/evelyns-sandwich-factory.jpg",
+    "featured": true,
+    "tone": { "bg": "#111827", "fg": "#F9FAFB", "ac": "#818CF8" }
+  },
+  {
+    "name": "Harbour Hair Lounge",
+    "category": "Hair & Beauty",
+    "descriptor": "Luxury Hair Salon Website",
+    "summary": "An editorial salon website for a Port Colborne studio, with the team and online booking built in.",
+    "url": "https://customexclusivesocials.github.io/Harbour-Hair-Lounge/",
+    "image": "images/portfolio/harbour-hair-lounge.jpg",
+    "featured": true, "home": true,
+    "tone": { "bg": "#1F2937", "fg": "#F3F4F6", "ac": "#34D399" }
+  },
+  {
+    "name": "Aesthetics by Amie",
+    "category": "Hair & Beauty",
+    "descriptor": "Beauty & Aesthetics Website",
+    "url": "https://customexclusivesocials.github.io/aestheticsbyamie/",
+    "image": "images/portfolio/aesthetics-by-amie.jpg",
+    "featured": true,
+    "tone": { "bg": "#F5F1EA", "fg": "#2A2622", "ac": "#9A7B4F", "font": "serif" }
+  },
+  {
+    "name": "Ali Bakes Cakes",
+    "category": "Restaurants",
+    "descriptor": "Bakery Website",
+    "summary": "A luxury cake atelier look for a custom cake business serving Welland and Vineland, built around an easy order inquiry.",
+    "url": "https://customexclusivesocials.github.io/alibakescakes/",
+    "image": "images/portfolio/ali-bakes-cakes.jpg",
+    "featured": true,
+    "tone": { "bg": "#F6EFE6", "fg": "#3B2A22", "ac": "#C9A08E", "font": "serif" }
+  },
+  {
+    "name": "She Shoots She Sells",
+    "category": "Professional Services",
+    "descriptor": "Creator Management Agency Website",
+    "summary": "A bold, female-led brand site for a creator management agency in Ontario.",
+    "url": "https://sheshootsshesells.ca/",
+    "image": "images/portfolio/she-shoots-she-sells.jpg",
+    "featured": true,
+    "tone": { "bg": "#3A0D16", "fg": "#F6E9EA", "ac": "#D13A4B" }
+  },
+
+  /* ---------- MORE WORK ---------- */
+  {
+    "name": "A Moment in Time Bridal",
+    "category": "Bridal",
+    "descriptor": "Bridal Boutique Website",
+    "url": "https://customexclusivesocials.github.io/A-Moment-in-Time-Bridal/",
+    "image": "bridalmoment.png",
+    "home": true,
+    "tone": { "bg": "#F5F1EA", "fg": "#2A2622", "ac": "#9A7B4F", "font": "serif" }
+  },
+  {
+    "name": "SQIN Med & Wellness Clinic",
+    "category": "Hair & Beauty",
+    "descriptor": "Medical Aesthetics Clinic Website",
+    "url": "https://sqinmed.ca",
+    "image": "Sqin med Desktop website.png",
+    "home": true,
+    "tone": { "bg": "#F5F1EA", "fg": "#2A2622", "ac": "#9A7B4F", "font": "serif" }
+  },
+  {
+    "name": "Rocca's Unisex Hair & Grooming Salon",
+    "category": "Hair & Beauty",
+    "descriptor": "Unisex Salon Website",
+    "url": "https://customexclusivesocials.github.io/Rocca-s-Unisex-Hair-Grooming-Salon/",
+    "image": "images/portfolio/roccas-unisex-hair-grooming-salon.jpg",
+    "tone": { "bg": "#E7E2D9", "fg": "#1F1B16", "ac": "#6B5B45" }
+  },
+  {
+    "name": "Lincoln Barber Unisex",
+    "category": "Hair & Beauty",
+    "descriptor": "Barbershop Website",
+    "url": "https://customexclusivesocials.github.io/Lincoln-Barber-Unisex/",
+    "image": "images/portfolio/lincoln-barber-unisex.jpg",
+    "tone": { "bg": "#111827", "fg": "#F9FAFB", "ac": "#818CF8" }
+  },
+  {
+    "name": "Lil's Hair Salon",
+    "category": "Hair & Beauty",
+    "descriptor": "Family Hair Salon Website",
+    "url": "https://customexclusivesocials.github.io/lils-hair-salon-/",
+    "image": "images/portfolio/lils-hair-salon.jpg",
+    "tone": { "bg": "#6B1F2A", "fg": "#F3E6D3", "ac": "#C4A15F" }
+  },
+  {
+    "name": "Hair Alive",
+    "category": "Hair & Beauty",
+    "descriptor": "Hair Salon Website",
+    "url": "https://customexclusivesocials.github.io/hair-alive/",
+    "image": "images/portfolio/hair-alive.jpg",
+    "tone": { "bg": "#1F2937", "fg": "#F3F4F6", "ac": "#34D399" }
+  },
+  {
+    "name": "Janice Brows Oakville",
+    "category": "Hair & Beauty",
+    "descriptor": "Brow Studio Website",
+    "url": "https://customexclusivesocials.github.io/janicebrowsoakville/",
+    "image": "images/portfolio/janice-brows-oakville.jpg",
+    "tone": { "bg": "#F5F1EA", "fg": "#2A2622", "ac": "#9A7B4F", "font": "serif" }
+  },
+  {
+    "name": "Hair Gallery Unisex Salon",
+    "category": "Hair & Beauty",
+    "descriptor": "Unisex Salon Website",
+    "url": "https://customexclusivesocials.github.io/-Hair-Gallery-Unisex-Salon/",
+    "image": "images/portfolio/hair-gallery-unisex-salon.jpg",
+    "tone": { "bg": "#E7E2D9", "fg": "#1F1B16", "ac": "#6B5B45" }
+  },
+  {
+    "name": "Trésor Interiors Estate Sales",
+    "category": "Professional Services",
+    "alsoIn": ["Retail / E-Commerce"],
+    "descriptor": "Estate Sales & Interiors Website",
+    "url": "https://customexclusivesocials.github.io/Tresor-Interiors-Estate-Sales/",
+    "image": "images/portfolio/tresor-interiors-estate-sales.jpg",
+    "tone": { "bg": "#D9D6CF", "fg": "#161616", "ac": "#3F3F3F" }
+  },
+  {
+    "name": "Wolf Pack Taekwondo Academy",
+    "category": "Professional Services",
+    "descriptor": "Martial Arts Academy Website",
+    "url": "https://www.wolfpacktkd.ca/",
+    "image": "wolfpackwebsite.png",
+    "tone": { "bg": "#111827", "fg": "#F9FAFB", "ac": "#818CF8" }
+  },
+  {
+    "name": "NextStep Resumes",
+    "category": "Professional Services",
+    "descriptor": "Resume Services Website",
+    "url": "https://www.nextstepresumes.ca/",
+    "image": "nextstepdesktop.png",
+    "tone": { "bg": "#1F2937", "fg": "#F3F4F6", "ac": "#34D399" }
+  },
+  {
+    "name": "Bloom Lighthouse",
+    "category": "Professional Services",
+    "descriptor": "Business Website",
+    "url": "https://bloomlighthouse.ca",
+    "image": "bloomlighthouse-desktop.png",
+    "tone": { "bg": "#F5F1EA", "fg": "#2A2622", "ac": "#9A7B4F" }
+  }
+];
+
+/* Existing brand-identity / store-design work (not live websites, so no external link). */
+window.CES_BRAND_WORK = [
+  { "name": "MadeUp By Brooke", "label": "Brand Identity", "descriptor": "Clinical brand positioning and visual portfolio layout for advanced permanent makeup artistry.", "image": "lapmuadesktop.jpg", "tone": { "bg": "#F5F1EA", "fg": "#2A2622", "ac": "#9A7B4F", "font": "serif" } },
+  { "name": "NORDA Skincare", "label": "Brand Kit", "descriptor": "Primary logotype, oval submark and botanical packaging guidelines.", "image": "NORDA.png", "tone": { "bg": "#E7E2D9", "fg": "#1F1B16", "ac": "#6B5B45", "font": "serif" } },
+  { "name": "NOOR Hair Aesthetics", "label": "Logotype", "descriptor": "Minimalist interlocking typographic logo for hair extensions and salon portfolios.", "image": "NOOR.png", "tone": { "bg": "#111827", "fg": "#F9FAFB", "ac": "#818CF8" } },
+  { "name": "SQIN Shop", "label": "Store Design", "descriptor": "Shopify skin and wellness store with a clean cart, filters and upsell flow.", "image": "sqinshop1.png", "tone": { "bg": "#F5F1EA", "fg": "#2A2622", "ac": "#9A7B4F", "font": "serif" } }
+];
+
+/* ------------------------------------------------------------
+   Shared helpers (cards + previews). Safe to leave as-is.
+   ------------------------------------------------------------ */
+(function () {
+  var MAP = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" };
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return MAP[c]; }); }
+
+  function hostPath(u) {
+    try {
+      var a = new URL(u);
+      return (a.hostname + a.pathname).replace(/\/$/, "").replace(/^www\./, "");
+    } catch (e) { return ""; }
+  }
+
+  function slug(s) {
+    return String(s).toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  }
+
+  /* Browser-framed preview. Real screenshot sits on top of a branded fallback;
+     if the image file is missing it removes itself and the fallback shows. */
+  function preview(p, o) {
+    o = o || {};
+    var t = p.tone || { bg: "#111827", fg: "#F9FAFB", ac: "#818CF8" };
+    var lazy = o.lazy ? ' loading="lazy" decoding="async"' : ' decoding="async"';
+    var style = "--pv-bg:" + t.bg + ";--pv-fg:" + t.fg + ";--pv-ac:" + t.ac;
+    var serif = t.font === "serif" ? " pv--serif" : "";
+    var chrome = o.bare ? "" :
+      '<div class="pv-chrome" aria-hidden="true"><i></i><i></i><i></i><span>' + esc(hostPath(p.url || "")) + "</span></div>";
+    var alt = o.bare
+      ? esc(p.name) + " — " + esc(p.label || "brand work") + " by Custom Exclusive Socials"
+      : "Homepage of the " + esc(p.name) + " website designed and developed by Custom Exclusive Socials";
+    var img = p.image
+      ? '<img class="pv-img" src="' + esc(encodeURI(p.image)) + '" alt="' + alt + '" width="1600" height="1000"' + lazy + ' onerror="this.remove()">'
+      : "";
+    return '<div class="pv' + serif + (o.bare ? " pv--bare" : "") + '" style="' + style + '">' + chrome +
+      '<div class="pv-stage"><div class="pv-fallback" aria-hidden="true">' +
+      '<div class="pv-nav"><b>' + esc(p.name) + '</b><span><i></i><i></i><i></i></span></div>' +
+      '<div class="pv-hero"><h4>' + esc(p.name) + '</h4><p>' + esc(p.descriptor || p.label || "") + '</p><em></em></div>' +
+      "</div>" + img + "</div></div>";
+  }
+
+  /* Live-website card (opens the real site in a new tab). */
+  function card(p, o) {
+    o = o || {};
+    var label = "View live website: " + p.name + " (opens in a new tab)";
+    var link = 'href="' + esc(p.url) + '" target="_blank" rel="noopener noreferrer"';
+    var sum = o.summary && p.summary ? '<p class="proj-sum">' + esc(p.summary) + "</p>" : "";
+    return '<article class="proj' + (o.cls ? " " + o.cls : "") + '">' +
+      '<a class="proj-media" ' + link + ' tabindex="-1" aria-hidden="true">' + preview(p, o) +
+      '<span class="proj-hover"><span>Visit Site <b>↗</b></span></span></a>' +
+      '<div class="proj-info">' +
+      '<p class="proj-cat">' + esc(p.category) + "</p>" +
+      "<h3 class=\"proj-name\">" + esc(p.name) + "</h3>" +
+      '<p class="proj-desc">' + esc(p.descriptor) + "</p>" + sum +
+      '<a class="proj-link" ' + link + ' aria-label="' + esc(label) + '">View Live Website <span aria-hidden="true">→</span></a>' +
+      "</div></article>";
+  }
+
+  /* Static card for brand / store work (no external site). */
+  function staticCard(p, o) {
+    o = o || {};
+    return '<article class="proj proj--static">' +
+      '<div class="proj-media">' + preview(p, { lazy: o.lazy, bare: true }) + "</div>" +
+      '<div class="proj-info"><p class="proj-cat">' + esc(p.label) + "</p>" +
+      '<h3 class="proj-name">' + esc(p.name) + "</h3>" +
+      '<p class="proj-desc">' + esc(p.descriptor) + "</p></div></article>";
+  }
+
+  window.CES = { esc: esc, slug: slug, preview: preview, card: card, staticCard: staticCard };
+})();

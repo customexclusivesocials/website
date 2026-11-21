@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Custom Web Design for Local Businesses | Custom Exclusive Socials</title>
+<meta name="description" content="Real websites for real businesses. Browse custom restaurant, hair salon, beauty, bridal and professional services websites designed and developed by Custom Exclusive Socials in Niagara, Ontario.">
+<link rel="canonical" href="https://customesocials.ca/portfolio">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Portfolio — Custom Exclusive Socials">
+<meta property="og:description" content="Real websites. Real businesses. Built from the ground up.">
+<meta property="og:url" content="https://customesocials.ca/portfolio">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+/* ============================================================
+   CUSTOM EXCLUSIVE SOCIALS — DESIGN SYSTEM
+   ============================================================ */
+:root{
+  --charcoal:#111827;
+  --charcoal-2:#0B0F19;
+  --charcoal-3:#161F32;
+  --indigo:#6366F1;
+  --indigo-light:#818CF8;
+  --emerald:#10B981;
+  --emerald-light:#34D399;
+  --offwhite:#F9FAFB;
+  --offwhite-2:#F1F2F5;
+  --ink:#111827;
+  --ink-muted:#5B6472;
+  --muted-light:#9CA3AF;
+  --muted-lighter:#C7CBD4;
+  --white:#FFFFFF;
+  --border-dark:rgba(255,255,255,0.09);
+  --border-dark-strong:rgba(255,255,255,0.16);
+  --border-light:rgba(17,24,39,0.08);
+  --glass:rgba(255,255,255,0.045);
+  --glass-strong:rgba(255,255,255,0.08);
+  --shadow-glow:0 0 0 1px rgba(99,102,241,0.15),0 20px 60px -20px rgba(99,102,241,0.35);
+  --font-display:'Outfit',sans-serif;
+  --font-body:'Inter',sans-serif;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;}}
+body{
+  font-family:var(--font-body);
+  background:var(--charcoal);
+  color:var(--offwhite);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+ul{list-style:none;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;}
+input,textarea,select{font-family:inherit;}
+:focus-visible{outline:2px solid var(--indigo-light);outline-offset:3px;border-radius:4px;}
+.container{max-width:1200px;margin:0 auto;padding:0 24px;}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--font-display);font-size:12px;font-weight:600;
+  letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--indigo-light);
+  background:rgba(99,102,241,0.1);
+  border:1px solid rgba(99,102,241,0.25);
+  padding:7px 14px;border-radius:99px;margin-bottom:20px;
+}
+.eyebrow.on-light{color:#4F46E5;background:rgba(99,102,241,0.08);border-color:rgba(99,102,241,0.2);}
+.eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--emerald);box-shadow:0 0 8px var(--emerald);}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02em;color:var(--white);}
+.section-head{max-width:640px;margin-bottom:56px;}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
+.section-head h2{font-size:clamp(30px,4vw,44px);line-height:1.15;margin-bottom:16px;}
+.section-head p{font-size:17px;color:var(--muted-light);}
+.on-light h2{color:var(--ink);}
+.on-light .section-head p{color:var(--ink-muted);}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  font-family:var(--font-display);font-weight:600;font-size:15px;
+  padding:15px 28px;border-radius:12px;
+  transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s var(--ease),border-color .25s var(--ease);
+  white-space:nowrap;
+}
+.btn-primary{
+  background:linear-gradient(135deg,var(--indigo),#4F46E5);
+  color:#fff;box-shadow:0 8px 24px -8px rgba(99,102,241,0.6);
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 32px -10px rgba(99,102,241,0.75);}
+.btn-secondary{
+  background:var(--glass);
+  border:1px solid var(--border-dark-strong);
+  color:var(--white);backdrop-filter:blur(12px);
+}
+.btn-secondary:hover{background:var(--glass-strong);transform:translateY(-2px);}
+.btn-ghost-light{background:transparent;border:1px solid var(--border-light);color:var(--ink);}
+.btn-ghost-light:hover{background:var(--ink);color:#fff;border-color:var(--ink);}
+.btn-emerald{background:linear-gradient(135deg,var(--emerald),#059669);color:#fff;box-shadow:0 8px 24px -8px rgba(16,185,129,0.6);}
+.btn-emerald:hover{transform:translateY(-2px);}
+.btn-block{width:100%;}
+
+/* ============ HEADER ============ */
+.site-header{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  padding:16px 0;transition:background .3s var(--ease),border-color .3s var(--ease),padding .3s var(--ease);
+  border-bottom:1px solid transparent;
+}
+.site-header.scrolled{
+  background:rgba(17,24,39,0.78);backdrop-filter:blur(16px) saturate(160%);
+  border-bottom:1px solid var(--border-dark);padding:12px 0;
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;}
+.logo{font-family:var(--font-display);font-size:19px;font-weight:700;color:#fff;letter-spacing:-0.01em;display:flex;align-items:center;gap:2px;}
+.logo .dot{color:var(--indigo-light);}
+.nav-links{display:flex;align-items:center;gap:34px;}
+.nav-link{font-size:14.5px;font-weight:500;color:var(--muted-lighter);transition:color .2s;position:relative;}
+.nav-link:hover{color:#fff;}
+.header-actions{display:flex;align-items:center;gap:14px;}
+.btn-header{padding:11px 20px;font-size:14px;}
+.mobile-toggle{display:none;background:var(--glass);border:1px solid var(--border-dark);width:42px;height:42px;border-radius:10px;align-items:center;justify-content:center;color:#fff;font-size:18px;}
+.mobile-nav{
+  display:none;position:fixed;inset:0;z-index:999;background:rgba(11,15,25,0.98);backdrop-filter:blur(20px);
+  flex-direction:column;align-items:center;justify-content:center;gap:8px;
+  opacity:0;visibility:hidden;transition:opacity .3s var(--ease);
+}
+.mobile-nav.open{opacity:1;visibility:visible;}
+.mobile-nav a{font-family:var(--font-display);font-size:26px;font-weight:600;color:#fff;padding:14px 0;}
+.mobile-nav .btn{margin-top:20px;}
+.mobile-close{position:absolute;top:22px;right:24px;font-size:28px;color:#fff;background:none;border:none;}
+
+@media(max-width:920px){
+  .nav-links{display:none;}
+  .header-actions .btn-header{display:none;}
+  .mobile-toggle{display:flex;}
+  .mobile-nav{display:flex;}
+}
+
+.site-footer{background:var(--charcoal-2);border-top:1px solid var(--border-dark);padding:56px 0 30px;}
+.footer-top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:44px;}
+.footer-brand p{color:var(--muted-light);font-size:14px;max-width:280px;margin-top:14px;}
+.footer-cols{display:flex;gap:70px;flex-wrap:wrap;}
+.footer-col h5{font-family:var(--font-display);font-size:12.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted-light);margin-bottom:16px;}
+.footer-col a,.footer-col p{display:block;font-size:14px;color:var(--muted-lighter);margin-bottom:11px;}
+.footer-col a:hover{color:#fff;}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;border-top:1px solid var(--border-dark);padding-top:26px;font-size:13px;color:var(--muted-light);}
+.footer-social{display:flex;gap:12px;}
+.footer-social a{width:36px;height:36px;border-radius:9px;background:var(--glass);border:1px solid var(--border-dark);display:flex;align-items:center;justify-content:center;transition:all .2s;}
+.footer-social a:hover{background:var(--indigo);border-color:var(--indigo);}
+@media(max-width:700px){.footer-top{flex-direction:column;}.footer-bottom{flex-direction:column;text-align:center;}}
+
+
+/* ============ PORTFOLIO PAGE ============ */
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+.nav-link[aria-current="page"]{color:#fff;}
+.nav-link[aria-current="page"]::after{content:'';position:absolute;left:0;right:0;bottom:-8px;height:1px;background:var(--indigo-light);}
+.pg-hero{padding:176px 0 88px;background:var(--charcoal-2);border-bottom:1px solid var(--border-dark);}
+.pg-hero h1{font-size:clamp(40px,6vw,76px);line-height:1.02;letter-spacing:-.03em;max-width:15ch;margin-bottom:26px;}
+.pg-lede{font-family:var(--font-display);font-size:clamp(20px,2.4vw,28px);font-weight:500;line-height:1.3;color:#fff;max-width:28ch;margin-bottom:18px;}
+.pg-sub{font-size:16.5px;color:var(--muted-light);max-width:56ch;}
+.pg-count{display:flex;align-items:baseline;gap:12px;margin-top:40px;padding-top:26px;border-top:1px solid var(--border-dark);font-size:13.5px;color:var(--muted-light);max-width:420px;}
+.pg-count strong{font:700 40px/1 var(--font-display);color:#fff;letter-spacing:-.02em;}
+
+.pg-work{background:var(--offwhite);color:var(--ink);padding:72px 0 120px;}
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:72px;padding-bottom:28px;border-bottom:1px solid var(--border-light);}
+.filter{
+  display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 20px;border-radius:99px;
+  font:600 12.5px/1 var(--font-display);letter-spacing:.12em;text-transform:uppercase;color:var(--ink);
+  background:transparent;border:1px solid rgba(17,24,39,.18);transition:background .25s var(--ease),color .25s var(--ease),border-color .25s var(--ease);
+}
+.filter .n{font-weight:500;opacity:.5;letter-spacing:0;}
+.filter:hover{border-color:var(--ink);}
+.filter[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink);}
+.filter[aria-pressed="true"] .n{opacity:.6;}
+
+.block-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:36px;}
+.block-head h2{font-size:clamp(24px,2.6vw,32px);color:var(--ink);letter-spacing:-.02em;}
+.block-head span{font-size:13px;color:var(--ink-muted);letter-spacing:.04em;}
+.block+.block{margin-top:104px;}
+
+.grid-featured{display:grid;grid-template-columns:repeat(12,1fr);gap:72px 32px;}
+.grid-featured .proj{grid-column:span 6;--ar:1.45;}
+.grid-featured .s7{grid-column:span 7;--ar:1.7;}
+.grid-featured .s5{grid-column:span 5;--ar:1.2;}
+.grid-featured .s6{grid-column:span 6;--ar:1.45;}
+.grid-featured .s12{grid-column:span 12;--ar:2.4;}
+.grid-more{display:grid;grid-template-columns:repeat(3,1fr);gap:56px 28px;}
+.grid-more .proj{--ar:1.6;}
+
+.empty{padding:80px 0;text-align:center;color:var(--ink-muted);font-size:16px;}
+
+.grid-brand{display:grid;grid-template-columns:repeat(4,1fr);gap:40px 24px;}
+.grid-brand .proj{--ar:1.25;gap:16px;}
+.grid-brand .proj-name{font-size:19px;}
+.grid-brand .proj-desc{font-size:13.5px;}
+
+.pg-brand{background:var(--offwhite-2);border-top:1px solid var(--border-light);padding:96px 0 112px;color:var(--ink);}
+.pg-brand .section-head{margin-bottom:48px;}
+
+.pg-cta{background:var(--charcoal-2);padding:120px 0;text-align:left;border-top:1px solid var(--border-dark);}
+.pg-cta .inner{max-width:760px;}
+.pg-cta h2{font-size:clamp(34px,5vw,60px);line-height:1.04;letter-spacing:-.03em;margin-bottom:22px;}
+.pg-cta p{font-size:18px;color:var(--muted-lighter);max-width:48ch;margin-bottom:38px;}
+.btn-caps{text-transform:uppercase;letter-spacing:.12em;font-size:13.5px;padding:17px 34px;}
+.btn-caps span{display:inline-block;transition:transform .3s var(--ease);}
+.btn-caps:hover span{transform:translateX(5px);}
+
+@media(max-width:1020px){
+  .grid-more{grid-template-columns:repeat(2,1fr);}
+  .grid-brand{grid-template-columns:repeat(2,1fr);}
+  .grid-featured .proj,.grid-featured .s7,.grid-featured .s5,.grid-featured .s6{grid-column:span 6;--ar:1.45;}
+  .grid-featured .s12{grid-column:span 12;--ar:2;}
+}
+@media(max-width:700px){
+  .pg-hero{padding:136px 0 64px;}
+  .pg-work{padding:48px 0 88px;}
+  .filters{gap:8px;margin-bottom:48px;}
+  .filter{padding:0 16px;font-size:11.5px;letter-spacing:.1em;}
+  .grid-featured{gap:52px 0;}
+  .grid-featured .proj,.grid-featured .s7,.grid-featured .s5,.grid-featured .s6,.grid-featured .s12{grid-column:1/-1;--ar:1.5;}
+  .grid-more,.grid-brand{grid-template-columns:1fr;gap:44px;}
+  .grid-brand .proj{--ar:1.5;}
+  .block+.block{margin-top:80px;}
+  .pg-cta{padding:88px 0;}
+}
+</style>
+<link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">Custom Exclusive Socials<span class="dot">.</span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html#services" class="nav-link">Services</a>
+      <a href="portfolio.html" class="nav-link" aria-current="page">Portfolio</a>
+      <a href="index.html#pricing" class="nav-link">Pricing</a>
+      <a href="index.html#about" class="nav-link">About</a>
+      <a href="index.html#faq" class="nav-link">FAQ</a>
+    </nav>
+    <div class="header-actions">
+      <a href="index.html#quote" class="btn btn-secondary btn-header">Get a Free Quote</a>
+      <a href="index.html#quote" class="btn btn-primary btn-header">Book Strategy Call</a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">☰</button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
+  <a href="index.html#services">Services</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="index.html#pricing">Pricing</a>
+  <a href="index.html#about">About</a>
+  <a href="index.html#faq">FAQ</a>
+  <a href="index.html#quote" class="btn btn-primary">Book Strategy Call</a>
+</div>
+
+<main id="top">
+
+<section class="pg-hero">
+  <div class="container">
+    <span class="eyebrow"><span class="dot"></span>Portfolio</span>
+    <h1>Selected Web Design Work</h1>
+    <p class="pg-lede">Real websites. Real businesses. Built from the ground up.</p>
+    <p class="pg-sub">Every project below is a live website designed and developed by Custom Exclusive Socials. Browse by industry, then click through to see each one in action.</p>
+    <div class="pg-count"><strong id="liveCount">0</strong><span>live websites designed &amp; developed</span></div>
+  </div>
+</section>
+
+<section class="pg-work work work--light" id="work" aria-labelledby="workHeading">
+  <div class="container">
+    <h2 id="workHeading" class="sr-only">Client websites</h2>
+    <div class="filters" id="filters" role="group" aria-label="Filter projects by industry"></div>
+    <p class="sr-only" id="filterStatus" role="status" aria-live="polite"></p>
+
+    <div class="block" id="featuredBlock">
+      <div class="block-head"><h2>Featured Projects</h2><span id="featuredCount"></span></div>
+      <div class="grid-featured" id="featuredGrid"></div>
+    </div>
+
+    <div class="block" id="moreBlock">
+      <div class="block-head"><h2>More Projects</h2><span id="moreCount"></span></div>
+      <div class="grid-more" id="moreGrid"></div>
+    </div>
+
+    <p class="empty" id="emptyState" hidden>No projects in this category yet.</p>
+    <noscript>
+      <p class="empty">Enable JavaScript to browse and filter the portfolio. Live websites:</p>
+      <ul style="columns:2;padding:0 0 24px;">
+        <li><a href="https://customexclusivesocials.github.io/marios-place/" target="_blank" rel="noopener noreferrer">Mario's Place</a></li>
+        <li><a href="https://customexclusivesocials.github.io/EvelynsSandwichFactory/" target="_blank" rel="noopener noreferrer">Evelyn's Sandwich Factory</a></li>
+        <li><a href="https://customexclusivesocials.github.io/Harbour-Hair-Lounge/" target="_blank" rel="noopener noreferrer">Harbour Hair Lounge</a></li>
+        <li><a href="https://customexclusivesocials.github.io/aestheticsbyamie/" target="_blank" rel="noopener noreferrer">Aesthetics by Amie</a></li>
+        <li><a href="https://customexclusivesocials.github.io/alibakescakes/" target="_blank" rel="noopener noreferrer">Ali Bakes Cakes</a></li>
+        <li><a href="https://sheshootsshesells.ca/" target="_blank" rel="noopener noreferrer">She Shoots She Sells</a></li>
+        <li><a href="https://customexclusivesocials.github.io/A-Moment-in-Time-Bridal/" target="_blank" rel="noopener noreferrer">A Moment in Time Bridal</a></li>
+        <li><a href="https://sqinmed.ca" target="_blank" rel="noopener noreferrer">SQIN Med &amp; Wellness Clinic</a></li>
+        <li><a href="https://customexclusivesocials.github.io/Rocca-s-Unisex-Hair-Grooming-Salon/" target="_blank" rel="noopener noreferrer">Rocca's Unisex Hair &amp; Grooming Salon</a></li>
+        <li><a href="https://customexclusivesocials.github.io/Lincoln-Barber-Unisex/" target="_blank" rel="noopener noreferrer">Lincoln Barber Unisex</a></li>
+        <li><a href="https://customexclusivesocials.github.io/lils-hair-salon-/" target="_blank" rel="noopener noreferrer">Lil's Hair Salon</a></li>
+        <li><a href="https://customexclusivesocials.github.io/hair-alive/" target="_blank" rel="noopener noreferrer">Hair Alive</a></li>
+        <li><a href="https://customexclusivesocials.github.io/janicebrowsoakville/" target="_blank" rel="noopener noreferrer">Janice Brows Oakville</a></li>
+        <li><a href="https://customexclusivesocials.github.io/-Hair-Gallery-Unisex-Salon/" target="_blank" rel="noopener noreferrer">Hair Gallery Unisex Salon</a></li>
+        <li><a href="https://customexclusivesocials.github.io/Tresor-Interiors-Estate-Sales/" target="_blank" rel="noopener noreferrer">Trésor Interiors Estate Sales</a></li>
+        <li><a href="https://www.wolfpacktkd.ca/" target="_blank" rel="noopener noreferrer">Wolf Pack Taekwondo Academy</a></li>
+        <li><a href="https://www.nextstepresumes.ca/" target="_blank" rel="noopener noreferrer">NextStep Resumes</a></li>
+        <li><a href="https://bloomlighthouse.ca" target="_blank" rel="noopener noreferrer">Bloom Lighthouse</a></li>
+      </ul>
+    </noscript>
+  </div>
+</section>
+
+<section class="pg-brand work work--light" aria-labelledby="brandHeading">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow on-light"><span class="dot"></span>Beyond Websites</span>
+      <h2 id="brandHeading">Brand Identity &amp; Store Design</h2>
+      <p>Logo systems, brand kits and a Shopify storefront created alongside our web design work.</p>
+    </div>
+    <div class="grid-brand" id="brandGrid"></div>
+  </div>
+</section>
+
+<section class="pg-cta" aria-labelledby="ctaHeading">
+  <div class="container">
+    <div class="inner">
+      <h2 id="ctaHeading">Your Business Deserves a Better Website.</h2>
+      <p>Ready to turn your online presence into something that actually represents your business?</p>
+      <a href="index.html#quote" class="btn btn-primary btn-caps">Start Your Project <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">Custom Exclusive Socials<span class="dot">.</span></a>
+          <p>Web design, social growth, and AI automation for beauty, wellness, and med-aesthetics businesses across Niagara and Ontario.</p>
+        </div>
+        <div class="footer-cols">
+          <div class="footer-col">
+            <h5>Site</h5>
+            <a href="index.html#services">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="index.html#pricing">Pricing</a>
+            <a href="index.html#about">About</a>
+          </div>
+          <div class="footer-col">
+            <h5>Service Region</h5>
+            <p>Niagara Falls, ON</p>
+            <p>Niagara Region</p>
+            <p>Ontario-Wide (Remote)</p>
+          </div>
+          <div class="footer-col">
+            <h5>Contact</h5>
+            <a href="mailto:customexclusivesocials@gmail.com">customexclusivesocials@gmail.com</a>
+            <a href="tel:+17055614388">(705) 561-4388</a>
+            <a href="index.html#quote">Get a free quote</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Custom Exclusive Socials. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="projects.js"></script>
+<script>
+(function(){
+  /* ---------- header + mobile nav (same behaviour as homepage) ---------- */
+  var header=document.getElementById('siteHeader');
+  window.addEventListener('scroll',function(){header.classList.toggle('scrolled',window.scrollY>40);});
+  var toggle=document.getElementById('mobileToggle'),closeBtn=document.getElementById('mobileClose'),mobileNav=document.getElementById('mobileNav');
+  function setNav(open){mobileNav.classList.toggle('open',open);toggle.setAttribute('aria-expanded',open?'true':'false');}
+  toggle.addEventListener('click',function(){setNav(true);});
+  closeBtn.addEventListener('click',function(){setNav(false);});
+  mobileNav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setNav(false);});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setNav(false);});
+
+  /* ---------- portfolio ---------- */
+  var CES=window.CES,P=window.CES_PROJECTS||[],CATS=window.CES_CATEGORIES||[];
+  var els={
+    filters:document.getElementById('filters'),status:document.getElementById('filterStatus'),
+    fBlock:document.getElementById('featuredBlock'),fGrid:document.getElementById('featuredGrid'),fCount:document.getElementById('featuredCount'),
+    mBlock:document.getElementById('moreBlock'),mGrid:document.getElementById('moreGrid'),mCount:document.getElementById('moreCount'),
+    empty:document.getElementById('emptyState')
+  };
+
+  function inCat(p,c){return c==='all'||p.category===c||(p.alsoIn||[]).indexOf(c)>-1;}
+  function count(c){return P.filter(function(p){return inCat(p,c);}).length;}
+
+  /* editorial rhythm for featured cards: 7/5, 5/7, 6/6 … and a full-width closer if odd */
+  var PAIRS=[['s7','s5'],['s5','s7'],['s6','s6']];
+  function sizeClass(i,n){
+    if(n%2===1&&i===n-1)return 's12';
+    return PAIRS[Math.floor(i/2)%PAIRS.length][i%2];
+  }
+  function plural(n,w){return n+' '+w+(n===1?'':'s');}
+
+  var active='all';
+  function render(cat,animate){
+    active=cat;
+    var vis=P.filter(function(p){return inCat(p,cat);});
+    var feat=vis.filter(function(p){return p.featured;});
+    var more=vis.filter(function(p){return !p.featured;});
+
+    els.fGrid.innerHTML=feat.map(function(p,i){return CES.card(p,{lazy:i>1,summary:true,cls:sizeClass(i,feat.length)});}).join('');
+    els.mGrid.innerHTML=more.map(function(p){return CES.card(p,{lazy:true});}).join('');
+    els.fBlock.hidden=!feat.length;els.mBlock.hidden=!more.length;els.empty.hidden=vis.length>0;
+    els.fCount.textContent=plural(feat.length,'project');els.mCount.textContent=plural(more.length,'project');
+    if(animate){document.querySelectorAll('#featuredGrid .proj,#moreGrid .proj').forEach(function(c,i){c.classList.add('proj-in');c.style.animationDelay=(Math.min(i,8)*45)+'ms';});}
+
+    els.filters.querySelectorAll('.filter').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.cat===cat?'true':'false');});
+    els.status.textContent='Showing '+plural(vis.length,'project')+(cat==='all'?'':' in '+cat);
+  }
+
+  /* filter buttons are built from the data; empty categories are skipped */
+  var btns=[{id:'all',label:'All'}].concat(CATS.filter(function(c){return count(c)>0;}).map(function(c){return {id:c,label:c};}));
+  els.filters.innerHTML=btns.map(function(b){
+    return '<button type="button" class="filter" data-cat="'+CES.esc(b.id)+'" aria-pressed="false">'+CES.esc(b.label)+' <span class="n">'+count(b.id)+'</span></button>';
+  }).join('');
+  els.filters.addEventListener('click',function(e){
+    var b=e.target.closest('.filter');if(!b)return;
+    render(b.dataset.cat,true);
+    try{history.replaceState(null,'',b.dataset.cat==='all'?location.pathname+location.search:'#'+CES.slug(b.dataset.cat));}catch(err){}
+  });
+
+  /* deep link: portfolio.html#hair-and-beauty */
+  var start='all',h=(location.hash||'').replace('#','');
+  if(h)CATS.forEach(function(c){if(CES.slug(c)===h&&count(c)>0)start=c;});
+  render(start,false);
+
+  document.getElementById('liveCount').textContent=P.filter(function(p){return p.url;}).length;
+  document.getElementById('brandGrid').innerHTML=(window.CES_BRAND_WORK||[]).map(function(p){return CES.staticCard(p,{lazy:true});}).join('');
+
+  /* structured data for search engines, built from the same array */
+  var ld={'@context':'https://schema.org','@type':'CollectionPage',name:'Portfolio — Custom Exclusive Socials',url:'https://customesocials.ca/portfolio',
+    description:'Live websites designed and developed by Custom Exclusive Socials for local businesses.',
+    mainEntity:{'@type':'ItemList',itemListElement:P.map(function(p,i){return {'@type':'ListItem',position:i+1,name:p.name,url:p.url};})}};
+  var s=document.createElement('script');s.type='application/ld+json';s.text=JSON.stringify(ld);document.head.appendChild(s);
+})();
+</script>
+</body>
+</html>
