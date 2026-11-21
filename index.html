@@ -263,36 +263,15 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
 .automation-visual{border-radius:18px;overflow:hidden;border:1px solid var(--border-dark-strong);box-shadow:var(--shadow-glow);}
 @media(max-width:900px){.automation-grid{grid-template-columns:1fr;}}
 
-/* ============ PORTFOLIO ============ */
+/* ============ FEATURED WORK (card styles live in portfolio.css) ============ */
 .portfolio{padding:120px 0;background:var(--charcoal);}
-.filter-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:44px;}
-.filter-btn{
-  font-family:var(--font-display);font-size:13.5px;font-weight:600;
-  padding:10px 20px;border-radius:99px;border:1px solid var(--border-dark-strong);
-  color:var(--muted-lighter);background:var(--glass);transition:all .25s var(--ease);
-}
-.filter-btn:hover{border-color:rgba(99,102,241,0.4);color:#fff;}
-.filter-btn.active{background:linear-gradient(135deg,var(--indigo),#4F46E5);color:#fff;border-color:transparent;}
-.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
-.portfolio-card{
-  background:var(--charcoal-3);border:1px solid var(--border-dark);border-radius:16px;overflow:hidden;
-  display:flex;flex-direction:column;transition:transform .35s var(--ease),border-color .35s var(--ease);
-}
-.portfolio-card:hover{transform:translateY(-5px);border-color:rgba(99,102,241,0.35);}
-.pf-preview{position:relative;aspect-ratio:16/10;overflow:hidden;background:#0d1220;}
-.pf-preview img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .5s var(--ease);}
-.portfolio-card:hover .pf-preview img{transform:scale(1.06);}
-.pf-status{position:absolute;top:12px;right:12px;background:rgba(17,24,39,0.85);backdrop-filter:blur(6px);color:#fff;font-size:11px;font-weight:600;padding:5px 11px;border-radius:99px;border:1px solid var(--border-dark-strong);}
-.pf-body{padding:24px;display:flex;flex-direction:column;flex-grow:1;}
-.pf-tag{font-size:11px;color:var(--indigo-light);text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin-bottom:8px;}
-.pf-body h3{font-size:19px;margin-bottom:9px;}
-.pf-body p{font-size:13.5px;color:var(--muted-light);flex-grow:1;margin-bottom:18px;}
-.pf-footer{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--border-dark);padding-top:16px;gap:10px;flex-wrap:wrap;}
-.pf-chips{display:flex;gap:6px;flex-wrap:wrap;}
-.pf-chips span{font-size:10.5px;color:var(--muted-lighter);background:rgba(255,255,255,0.05);padding:4px 9px;border-radius:5px;}
-.pf-link{font-size:12.5px;font-weight:600;font-family:var(--font-display);color:#fff;display:inline-flex;align-items:center;gap:5px;white-space:nowrap;}
-@media(max-width:980px){.portfolio-grid{grid-template-columns:repeat(2,1fr);}}
-@media(max-width:640px){.portfolio-grid{grid-template-columns:1fr;}}
+.home-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:56px 32px;}
+.home-grid .proj{--ar:1.6;}
+.home-work-cta{text-align:center;margin-top:64px;}
+.btn-caps{text-transform:uppercase;letter-spacing:.12em;font-size:13.5px;padding:17px 34px;}
+.btn-caps span{display:inline-block;transition:transform .3s var(--ease);}
+.btn-caps:hover span{transform:translateX(5px);}
+@media(max-width:760px){.home-grid{grid-template-columns:1fr;gap:44px;}}
 
 /* ============ ABOUT FOUNDER ============ */
 .about{padding:120px 0;background:var(--offwhite);color:var(--ink);}
@@ -402,6 +381,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
 .sticky-cta span{font-family:var(--font-display);font-size:13.5px;font-weight:600;color:#fff;}
 @media(max-width:640px){.sticky-cta.show{display:flex;}}
 </style>
+<link rel="stylesheet" href="portfolio.css">
 </head>
 <body>
 
@@ -411,7 +391,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
     <a href="#top" class="logo">Custom Exclusive Socials<span class="dot">.</span></a>
     <nav class="nav-links">
       <a href="#services" class="nav-link">Services</a>
-      <a href="#portfolio" class="nav-link">Portfolio</a>
+      <a href="portfolio.html" class="nav-link">Portfolio</a>
       <a href="#pricing" class="nav-link">Pricing</a>
       <a href="#about" class="nav-link">About</a>
       <a href="#faq" class="nav-link">FAQ</a>
@@ -427,7 +407,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
 <div class="mobile-nav" id="mobileNav">
   <button class="mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
   <a href="#services">Services</a>
-  <a href="#portfolio">Portfolio</a>
+  <a href="portfolio.html">Portfolio</a>
   <a href="#pricing">Pricing</a>
   <a href="#about">About</a>
   <a href="#faq">FAQ</a>
@@ -448,12 +428,6 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
         <a href="#quote" class="btn btn-primary">Start Your Project</a>
         <a href="#portfolio" class="btn btn-secondary">View Our Work</a>
       </div>
-      <div class="hero-trust">
-        <div class="avatar-stack">
-          <span>SQ</span><span>BL</span><span>NS</span><span>WP</span>
-        </div>
-        <span>Trusted by beauty, wellness &amp; med-aesthetics brands across Ontario</span>
-      </div>
     </div>
     <div class="hero-visual">
       <div class="mockup-card mockup-1">
@@ -469,7 +443,6 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
         <img src="nextstepdesktop.png" alt="NextStep Resumes website preview">
       </div>
       <div class="metric-badge badge-1"><i>⚡</i>100% Mobile Optimized</div>
-      <div class="metric-badge badge-2"><i>✓</i>GitHub-Hosted &amp; Fast</div>
       <div class="metric-badge badge-3"><i>★</i>5.0 Client Rated</div>
     </div>
   </div>
@@ -478,10 +451,10 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
 <!-- ============ METRICS BAR ============ -->
 <section class="metrics-bar">
   <div class="container metrics-grid">
-    <div class="metric-item reveal"><div class="num">10+</div><div class="label">Businesses Launched Online</div></div>
+    <div class="metric-item reveal"><div class="num">39+</div><div class="label">Businesses Scaled Growth Online</div></div>
     <div class="metric-item reveal"><div class="num">100%</div><div class="label">Mobile-Optimized Builds</div></div>
     <div class="metric-item reveal"><div class="num">1–2</div><div class="label">Day Response Time</div></div>
-    <div class="metric-item reveal"><div class="num">Niagara</div><div class="label">Region + Ontario-Wide</div></div>
+    <div class="metric-item reveal"><div class="num">Niagara Falls ON</div><div class="label">Region + Ontario-Wide</div></div>
   </div>
 </section>
 
@@ -624,7 +597,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
   </div>
 </section>
 
-<!-- ============ PORTFOLIO ============ -->
+<!-- ============ FEATURED WORK ============ -->
 <section class="portfolio" id="portfolio">
   <div class="container">
     <div class="section-head reveal">
@@ -633,156 +606,11 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
       <p>High-performance responsive websites, brand identities, and e-commerce builds for growing brands across Niagara and Ontario.</p>
     </div>
 
-    <div class="filter-row reveal">
-      <button class="filter-btn active" data-filter="all">All Work</button>
-      <button class="filter-btn" data-filter="web">Web Design</button>
-      <button class="filter-btn" data-filter="branding">Branding</button>
-      <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
-    </div>
+    <div class="work home-grid" id="homeWork"></div>
+    <noscript><p style="color:var(--muted-light);">Enable JavaScript to preview featured projects, or <a href="portfolio.html" style="color:var(--indigo-light);">view the full portfolio</a>.</p></noscript>
 
-    <div class="portfolio-grid" id="portfolioGrid">
-
-      <div class="portfolio-card reveal" data-cat="web">
-        <a class="pf-preview" href="https://medispaaesthetica.ca/" target="_blank" rel="noopener noreferrer">
-          <img src="Medi Spa Aesthetica" alt="Medi Spa Aesthetica Clinic website">
-          <span class="pf-status">Live Site ↗</span>
-        </a>
-        <div class="pf-body">
-          <span class="pf-tag">Web Design &amp; Med-Aesthetics Branding</span>
-          <h3>Medi Spa Aesthetica &amp; Injectables Clinic</h3>
-          <p>A luxury digital ecosystem built for elite medical aesthetics, featuring high-conversion booking pathways and clean editorial layouts.</p>
-          <div class="pf-footer">
-            <div class="pf-chips"><span>Booking Flow</span><span>Custom Build</span></div>
-            <a href="https://medispaaesthetica.ca/" target="_blank" rel="noopener noreferrer" class="pf-link">Visit site →</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio-card reveal" data-cat="web">
-        <a class="pf-preview" href="https://bloomlighthouse.ca" target="_blank" rel="noopener noreferrer">
-          <img src="bloomlighthouse-desktop.png" alt="Bloom Lighthouse website">
-          <span class="pf-status">Live Site ↗</span>
-        </a>
-        <div class="pf-body">
-          <span class="pf-tag">Digital Strategy &amp; Web Infrastructure</span>
-          <h3>Bloom Lighthouse</h3>
-          <p>A modern digital platform built with lightning-fast performance optimization and minimalist luxury design assets.</p>
-          <div class="pf-footer">
-            <div class="pf-chips"><span>Performance</span><span>SEO</span></div>
-            <a href="https://bloomlighthouse.ca" target="_blank" rel="noopener noreferrer" class="pf-link">Visit site →</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio-card reveal" data-cat="web">
-        <a class="pf-preview" href="https://www.wolfpacktkd.ca/" target="_blank" rel="noopener noreferrer">
-          <img src="wolfpackwebsite.png" alt="Wolf Pack Taekwondo Academy website">
-          <span class="pf-status">Live Site ↗</span>
-        </a>
-        <div class="pf-body">
-          <span class="pf-tag">Custom Web App · Niagara Falls, ON</span>
-          <h3>Wolf Pack Taekwondo Academy</h3>
-          <p>High-energy responsive site with integrated class schedules, lead-generation booking funnels, and Google review feeds.</p>
-          <div class="pf-footer">
-            <div class="pf-chips"><span>Lead Capture</span><span>Local SEO</span></div>
-            <a href="https://www.wolfpacktkd.ca/" target="_blank" rel="noopener noreferrer" class="pf-link">Visit site →</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio-card reveal" data-cat="web ecommerce">
-        <a class="pf-preview" href="https://customexclusivesocials.github.io/A-Moment-in-Time-Bridal/" target="_blank" rel="noopener noreferrer">
-          <img src="bridalmoment.png" alt="A Moment in Time Bridal website">
-          <span class="pf-status">Live Site ↗</span>
-        </a>
-        <div class="pf-body">
-          <span class="pf-tag">Luxury E-Commerce &amp; Booking</span>
-          <h3>A Moment in Time Bridal</h3>
-          <p>Editorial boutique digital experience with custom appointment scheduling, designer lookbooks, and VIP client portals.</p>
-          <div class="pf-footer">
-            <div class="pf-chips"><span>Luxury Branding</span><span>Suite Reservations</span></div>
-            <a href="https://customexclusivesocials.github.io/A-Moment-in-Time-Bridal/" target="_blank" rel="noopener noreferrer" class="pf-link">Visit site →</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio-card reveal" data-cat="web">
-        <a class="pf-preview" href="https://www.nextstepresumes.ca/" target="_blank" rel="noopener noreferrer">
-          <img src="nextstepdesktop.png" alt="NextStep Resumes website">
-          <span class="pf-status">Live Site ↗</span>
-        </a>
-        <div class="pf-body">
-          <span class="pf-tag">Web Design &amp; Messaging Strategy</span>
-          <h3>NextStep Resumes</h3>
-          <p>An authority-driven platform with a structured service breakdown, clear copy, and an optimized UX flow built to convert.</p>
-          <div class="pf-footer">
-            <div class="pf-chips"><span>Copywriting</span><span>UX Strategy</span></div>
-            <a href="https://www.nextstepresumes.ca/" target="_blank" rel="noopener noreferrer" class="pf-link">Visit site →</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio-card reveal" data-cat="branding">
-        <div class="pf-preview">
-          <img src="lapmuadesktop.jpg" alt="MadeUp By Brooke brand identity">
-          <span class="pf-status">Case Study</span>
-        </div>
-        <div class="pf-body">
-          <span class="pf-tag">Brand Identity &amp; Visual Assets</span>
-          <h3>MadeUp By Brooke</h3>
-          <p>High-end clinical brand positioning and visual portfolio layout designed to elevate advanced permanent makeup artistry.</p>
-          <div class="pf-footer">
-            <div class="pf-chips"><span>Brand Identity</span><span>Photography</span></div>
-            <span class="pf-link">In-house brand →</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio-card reveal" data-cat="branding">
-        <div class="pf-preview">
-          <img src="NORDA.png" alt="NORDA botanical skincare brand identity kit">
-        </div>
-        <div class="pf-body">
-          <span class="pf-tag">Brand Kit &amp; Submarks</span>
-          <h3>NORDA Skincare Identity</h3>
-          <p>Full-suite branding system featuring custom primary logotypes, oval submarks, and botanical packaging guidelines.</p>
-          <div class="pf-footer">
-            <div class="pf-chips"><span>Logo System</span><span>Packaging</span></div>
-            <span class="pf-link">Brand kit →</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio-card reveal" data-cat="ecommerce">
-        <div class="pf-preview">
-          <img src="theclinicashop.jpg" alt="Shopify cart and checkout design">
-        </div>
-        <div class="pf-body">
-          <span class="pf-tag">Shopify Dropshipping Infrastructure</span>
-          <h3>The Clinica Shop — Conversion Cart</h3>
-          <p>A custom Skin Care and Wellness e-commerce build with optimized conversion loops, clean filters, and automated upsell flows.</p>
-          <div class="pf-footer">
-            <div class="pf-chips"><span>Shopify</span><span>UX Strategy</span></div>
-            <span class="pf-link">E-commerce build →</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio-card reveal" data-cat="branding">
-        <div class="pf-preview">
-          <img src="NOOR.png" alt="NOOR Hair Aesthetics visual identity">
-        </div>
-        <div class="pf-body">
-          <span class="pf-tag">Luxury Logotype</span>
-          <h3>NOOR Hair Aesthetics</h3>
-          <p>Minimalist interlocking typographic logo crafted for high-end hair extensions, salon portfolios, and editorial imagery.</p>
-          <div class="pf-footer">
-            <div class="pf-chips"><span>Logotype</span><span>Editorial</span></div>
-            <span class="pf-link">Brand kit →</span>
-          </div>
-        </div>
-      </div>
-
+    <div class="home-work-cta reveal">
+      <a href="portfolio.html" class="btn btn-primary btn-caps">Explore All Projects <span aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
@@ -972,7 +800,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
           <div class="footer-col">
             <h5>Site</h5>
             <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
+            <a href="portfolio.html">Portfolio</a>
             <a href="#pricing">Pricing</a>
             <a href="#about">About</a>
           </div>
@@ -1006,6 +834,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
   <a href="#quote" class="btn btn-primary" style="padding:10px 18px;font-size:13px;">Get a Free Quote</a>
 </div>
 
+<script src="projects.js"></script>
 <script>
 (function(){
   // Sticky/scrolled header
@@ -1039,21 +868,14 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
   }, { threshold: 0.12 });
   revealEls.forEach(function(el){ io.observe(el); });
 
-  // Portfolio filtering
-  var filterBtns = document.querySelectorAll('.filter-btn');
-  var cards = document.querySelectorAll('.portfolio-card');
-  filterBtns.forEach(function(btn){
-    btn.addEventListener('click', function(){
-      filterBtns.forEach(function(b){ b.classList.remove('active'); });
-      btn.classList.add('active');
-      var filter = btn.getAttribute('data-filter');
-      cards.forEach(function(card){
-        var cats = card.getAttribute('data-cat').split(' ');
-        var show = filter === 'all' || cats.indexOf(filter) !== -1;
-        card.style.display = show ? '' : 'none';
-      });
-    });
-  });
+  // Featured Work preview (data lives in projects.js)
+  var homeWork = document.getElementById('homeWork');
+  if (homeWork && window.CES_PROJECTS) {
+    homeWork.innerHTML = window.CES_PROJECTS
+      .filter(function(p){ return p.home; })
+      .map(function(p, i){ return window.CES.card(p, { lazy: i > 1, summary: false }); })
+      .join('');
+  }
 
   // FAQ accordion
   document.querySelectorAll('.faq-item').forEach(function(item){
