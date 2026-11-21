@@ -104,6 +104,14 @@ window.CES_PROJECTS = [
     "tone": { "bg": "#F5F1EA", "fg": "#2A2622", "ac": "#9A7B4F", "font": "serif" }
   },
   {
+    "name": "Medi Spa Aesthetica",
+    "category": "Hair & Beauty",
+    "descriptor": "Aesthetics Clinic Website",
+    "url": "https://medispaaesthetica.ca/",
+    "image": "images/portfolio/medi-spa-aesthetica.jpg",
+    "tone": { "bg": "#F5F1EA", "fg": "#2A2622", "ac": "#9A7B4F", "font": "serif" }
+  },
+  {
     "name": "Rocca's Unisex Hair & Grooming Salon",
     "category": "Hair & Beauty",
     "descriptor": "Unisex Salon Website",
@@ -159,6 +167,14 @@ window.CES_PROJECTS = [
     "url": "https://customexclusivesocials.github.io/Tresor-Interiors-Estate-Sales/",
     "image": "images/portfolio/tresor-interiors-estate-sales.jpg",
     "tone": { "bg": "#D9D6CF", "fg": "#161616", "ac": "#3F3F3F" }
+  },
+  {
+    "name": "The Clinica Shop",
+    "category": "Retail / E-Commerce",
+    "descriptor": "Skincare & Aesthetics Shopify E-Commerce Store",
+    "url": "https://theclinicashop.com/",
+    "image": "images/portfolio/the-clinica-shop.jpg",
+    "tone": { "bg": "#E7E2D9", "fg": "#1F1B16", "ac": "#6B5B45", "font": "serif" }
   },
   {
     "name": "Wolf Pack Taekwondo Academy",
