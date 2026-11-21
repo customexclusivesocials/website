@@ -132,7 +132,8 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
 }
 .mobile-nav.open{opacity:1;visibility:visible;}
 .mobile-nav a{font-family:var(--font-display);font-size:26px;font-weight:600;color:#fff;padding:14px 0;}
-.mobile-nav .btn{margin-top:20px;}
+.mobile-nav .btn{margin-top:20px;font-size:15px;padding:16px 34px;}
+.mobile-nav{z-index:1100;}
 .mobile-close{position:absolute;top:22px;right:24px;font-size:28px;color:#fff;background:none;border:none;}
 
 @media(max-width:920px){
@@ -202,6 +203,8 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
 
 .pg-brand{background:var(--offwhite-2);border-top:1px solid var(--border-light);padding:96px 0 112px;color:var(--ink);}
 .pg-brand .section-head{margin-bottom:48px;}
+.pg-brand .section-head h2{color:var(--ink);}
+.pg-brand .section-head p{color:var(--ink-muted);}
 
 .pg-cta{background:var(--charcoal-2);padding:120px 0;text-align:left;border-top:1px solid var(--border-dark);}
 .pg-cta .inner{max-width:760px;}
@@ -224,7 +227,16 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
   .filter{padding:0 16px;font-size:11.5px;letter-spacing:.1em;}
   .grid-featured{gap:52px 0;}
   .grid-featured .proj,.grid-featured .s7,.grid-featured .s5,.grid-featured .s6,.grid-featured .s12{grid-column:1/-1;--ar:1.5;}
-  .grid-more,.grid-brand{grid-template-columns:1fr;gap:44px;}
+  .grid-brand{grid-template-columns:1fr;gap:44px;}
+  .grid-more{grid-template-columns:repeat(2,minmax(0,1fr));gap:34px 14px;}
+  .grid-more .proj{--ar:1.15;gap:12px;}
+  .grid-more .proj-info{padding:0 2px;gap:4px;}
+  .grid-more .proj-cat{font-size:9.5px;letter-spacing:.12em;}
+  .grid-more .proj-name{font-size:16px;margin-top:2px;}
+  .grid-more .proj-desc{font-size:12.5px;line-height:1.45;}
+  .grid-more .proj-link{font-size:10.5px;letter-spacing:.08em;line-height:1.35;white-space:normal;margin-top:4px;padding-bottom:3px;}
+  .grid-more .pv-chrome{padding:6px 8px;gap:4px;}
+  .grid-more .pv-chrome span{display:none;}
   .grid-brand .proj{--ar:1.5;}
   .block+.block{margin-top:80px;}
   .pg-cta{padding:88px 0;}
