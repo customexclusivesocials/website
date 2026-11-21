@@ -285,27 +285,83 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
 
 /* ============ PRICING ============ */
 .pricing{padding:120px 0;background:var(--charcoal);}
-.pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:stretch;}
-.price-card{
-  background:var(--glass);border:1px solid var(--border-dark);border-radius:20px;padding:40px 36px;
-  display:flex;flex-direction:column;position:relative;
+.pricing .section-head{max-width:680px;}
+.pr-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:28px;}
+.pr-card{
+  position:relative;display:flex;flex-direction:column;
+  background:rgba(255,255,255,0.03);border:1px solid var(--border-dark-strong);border-radius:18px;padding:44px 40px 40px;
+  transition:transform .4s var(--ease),border-color .4s var(--ease),background .4s var(--ease);
 }
-.price-card.featured{border-color:rgba(99,102,241,0.5);background:linear-gradient(180deg,rgba(99,102,241,0.09),rgba(99,102,241,0.02));box-shadow:var(--shadow-glow);}
-.price-badge{position:absolute;top:-13px;left:36px;background:linear-gradient(135deg,var(--emerald),#059669);color:#fff;font-family:var(--font-display);font-size:11.5px;font-weight:700;padding:6px 14px;border-radius:99px;letter-spacing:.03em;}
-.price-card h3{font-size:22px;margin-bottom:10px;}
-.price-amount{font-family:var(--font-display);font-size:40px;font-weight:800;color:#fff;margin-bottom:6px;}
-.price-amount span{font-size:15px;font-weight:500;color:var(--muted-light);}
-.price-brief{font-size:14px;color:var(--muted-light);margin-bottom:26px;}
-.price-features{display:flex;flex-direction:column;gap:13px;margin-bottom:28px;flex-grow:1;}
-.price-features li{display:flex;align-items:flex-start;gap:10px;font-size:14.5px;color:var(--muted-lighter);}
-.price-features i{color:var(--emerald-light);font-size:15px;margin-top:2px;}
-.web-tier-stack{display:flex;flex-direction:column;gap:14px;margin-bottom:28px;flex-grow:1;}
-.web-tier-row{display:flex;align-items:center;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--border-dark);gap:16px;}
-.web-tier-row:last-child{border-bottom:none;}
-.web-tier-row h4{font-size:15.5px;margin-bottom:3px;}
-.web-tier-row p{font-size:13px;color:var(--muted-light);margin:0;}
-.web-tier-cost{font-family:var(--font-display);font-weight:700;color:#fff;font-size:16px;white-space:nowrap;}
-@media(max-width:900px){.pricing-grid{grid-template-columns:1fr;}}
+.pr-card:hover{transform:translateY(-3px);border-color:rgba(255,255,255,0.28);background:rgba(255,255,255,0.045);}
+.pr-card--premium{background:var(--charcoal-3);border-color:rgba(99,102,241,0.55);}
+.pr-card--premium::before{content:'';position:absolute;left:40px;right:40px;top:-1px;height:2px;background:var(--indigo);}
+.pr-card--premium:hover{border-color:var(--indigo-light);background:#1a2338;}
+.pr-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:28px;}
+.pr-label{font-family:var(--font-display);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-light);}
+.pr-card--premium .pr-label{color:var(--indigo-light);}
+.pr-tag{font-family:var(--font-display);font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#fff;border:1px solid rgba(99,102,241,0.6);border-radius:99px;padding:6px 12px;}
+.pr-from{font-size:12.5px;color:var(--muted-light);letter-spacing:.04em;margin-bottom:4px;}
+.pr-price{display:flex;align-items:baseline;gap:4px;font-family:var(--font-display);font-weight:700;color:#fff;line-height:1;letter-spacing:-.04em;margin-bottom:22px;}
+.pr-price .cur{font-size:26px;font-weight:500;align-self:flex-start;margin-top:10px;margin-right:2px;color:var(--muted-lighter);}
+.pr-price .amt{font-size:clamp(64px,7vw,84px);}
+.pr-price .plus{font-size:clamp(34px,3.6vw,44px);font-weight:500;color:var(--indigo-light);}
+.pr-price .per{font-family:var(--font-body);font-size:14px;font-weight:500;letter-spacing:.02em;color:var(--muted-light);margin-left:8px;}
+.pr-desc{font-size:15px;line-height:1.65;color:var(--muted-lighter);margin-bottom:22px;max-width:44ch;}
+.pr-note{font-size:13px;line-height:1.6;color:var(--muted-light);border-left:2px solid rgba(99,102,241,0.55);padding:2px 0 2px 14px;margin-bottom:28px;}
+.pr-list{display:flex;flex-direction:column;border-top:1px solid var(--border-dark);margin-bottom:32px;flex-grow:1;}
+.pr-list li{display:flex;gap:12px;align-items:baseline;padding:13px 0;border-bottom:1px solid var(--border-dark);font-size:14.5px;color:var(--muted-lighter);}
+.pr-list i{font-style:normal;font-size:13px;color:var(--emerald-light);flex:0 0 auto;}
+.pr-btn{align-self:flex-start;}
+.pr-card .btn-secondary{background:transparent;}
+.pr-card .btn-secondary:hover{background:#fff;color:var(--charcoal);border-color:#fff;}
+
+/* Website design — wide card */
+.pr-web{display:grid;grid-template-columns:5fr 7fr;gap:56px;margin-bottom:28px;padding:48px 40px;}
+.pr-web .pr-desc{margin-bottom:20px;}
+.pr-web-copy{display:flex;flex-direction:column;}
+.pr-web-copy h3{font-size:clamp(28px,3vw,36px);letter-spacing:-.02em;line-height:1.1;margin-bottom:16px;}
+.pr-web-copy .pr-btn{margin-top:auto;}
+.pr-fine{font-size:12.5px;line-height:1.6;color:var(--muted-light);margin:6px 0 28px;}
+.pr-tiers{display:flex;flex-direction:column;border-top:1px solid var(--border-dark);}
+.pr-tier{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:26px 0;border-bottom:1px solid var(--border-dark);transition:padding .35s var(--ease);}
+.pr-tier:hover{padding-left:10px;}
+.pr-tier h4{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-lighter);margin-bottom:8px;}
+.pr-tier p{font-size:14.5px;color:var(--muted-light);max-width:34ch;}
+.pr-tier-price{font-family:var(--font-display);font-weight:700;font-size:clamp(34px,3.6vw,46px);letter-spacing:-.03em;color:#fff;line-height:1;white-space:nowrap;}
+.pr-tier-price b{font-weight:500;color:var(--indigo-light);}
+
+/* Budget message */
+.budget{
+  display:grid;grid-template-columns:1.1fr 0.9fr;gap:64px;align-items:center;
+  background:var(--offwhite);color:var(--ink);border-radius:20px;padding:64px 56px;
+}
+.budget .eyebrow{margin-bottom:22px;}
+.budget h3{color:var(--ink);font-size:clamp(32px,4.2vw,52px);line-height:1.04;letter-spacing:-.03em;margin-bottom:22px;max-width:14ch;}
+.budget-copy>p{font-size:16.5px;line-height:1.7;color:var(--ink-muted);max-width:50ch;margin-bottom:34px;}
+.budget-cta{display:flex;flex-direction:column;align-items:flex-start;gap:16px;}
+.budget-cta strong{font-family:var(--font-display);font-size:17px;font-weight:600;color:var(--ink);letter-spacing:-.01em;}
+.budget-cta .btn-primary{background:var(--ink);box-shadow:none;}
+.budget-cta .btn-primary:hover{background:#4F46E5;box-shadow:0 14px 30px -12px rgba(79,70,229,.55);}
+.budget-points{display:flex;flex-direction:column;border-top:1px solid var(--border-light);counter-reset:bp;}
+.budget-points li{counter-increment:bp;display:flex;gap:18px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--border-light);font-family:var(--font-display);font-size:17px;font-weight:500;line-height:1.35;color:var(--ink);}
+.budget-points li::before{content:'0' counter(bp);font-size:12px;font-weight:600;letter-spacing:.1em;color:#4F46E5;flex:0 0 auto;}
+.budget-note{font-size:12.5px;line-height:1.6;color:var(--ink-muted);margin-top:18px;}
+
+@media(max-width:980px){
+  .pr-web{grid-template-columns:1fr;gap:36px;}
+  .budget{grid-template-columns:1fr;gap:44px;padding:52px 40px;}
+}
+@media(max-width:760px){
+  .pricing{padding:88px 0;}
+  .pr-grid{grid-template-columns:1fr;}
+  .pr-card{padding:36px 26px 32px;}
+  .pr-card--premium::before{left:26px;right:26px;}
+  .pr-web{padding:38px 26px;}
+  .pr-tier{flex-direction:column;align-items:flex-start;gap:14px;}
+  .pr-tier:hover{padding-left:0;}
+  .budget{padding:40px 26px;border-radius:16px;}
+  .pr-btn,.budget-cta .btn{align-self:stretch;width:100%;}
+}
 
 /* ============ LEAD FORM ============ */
 .lead-section{padding:120px 0;background:var(--offwhite);color:var(--ink);}
@@ -428,6 +484,12 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
         <a href="#quote" class="btn btn-primary">Start Your Project</a>
         <a href="#portfolio" class="btn btn-secondary">View Our Work</a>
       </div>
+      <div class="hero-trust">
+        <div class="avatar-stack">
+          <span>SQ</span><span>BL</span><span>NS</span><span>WP</span>
+        </div>
+        <span>Trusted by beauty, wellness &amp; med-aesthetics brands across Ontario</span>
+      </div>
     </div>
     <div class="hero-visual">
       <div class="mockup-card mockup-1">
@@ -443,6 +505,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
         <img src="nextstepdesktop.png" alt="NextStep Resumes website preview">
       </div>
       <div class="metric-badge badge-1"><i>⚡</i>100% Mobile Optimized</div>
+      <div class="metric-badge badge-2"><i>✓</i>GitHub-Hosted &amp; Fast</div>
       <div class="metric-badge badge-3"><i>★</i>5.0 Client Rated</div>
     </div>
   </div>
@@ -451,10 +514,10 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
 <!-- ============ METRICS BAR ============ -->
 <section class="metrics-bar">
   <div class="container metrics-grid">
-    <div class="metric-item reveal"><div class="num">39+</div><div class="label">Businesses Scaled Growth Online</div></div>
+    <div class="metric-item reveal"><div class="num">10+</div><div class="label">Businesses Launched Online</div></div>
     <div class="metric-item reveal"><div class="num">100%</div><div class="label">Mobile-Optimized Builds</div></div>
     <div class="metric-item reveal"><div class="num">1–2</div><div class="label">Day Response Time</div></div>
-    <div class="metric-item reveal"><div class="num">Niagara Falls ON</div><div class="label">Region + Ontario-Wide</div></div>
+    <div class="metric-item reveal"><div class="num">Niagara</div><div class="label">Region + Ontario-Wide</div></div>
   </div>
 </section>
 
@@ -639,50 +702,93 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02
   <div class="container">
     <div class="section-head center reveal">
       <span class="eyebrow" style="margin-left:auto;margin-right:auto;"><span class="dot"></span>Investment</span>
-      <h2>Transparent Growth Packages</h2>
-      <p style="margin:0 auto;">Elite digital transformation packages built for high-performance businesses. Every project starts with a free consultation.</p>
+      <h2>Transparent Pricing, Tailored to You</h2>
+      <p style="margin:0 auto;">Starting prices for every service. The final scope and investment are always shaped around your business and your budget.</p>
     </div>
-    <div class="pricing-grid">
 
-      <div class="price-card featured reveal">
-        <span class="price-badge">Most Popular</span>
-        <h3>Premium Social</h3>
-        <div class="price-amount">$500<span>&amp; up / month</span></div>
-        <p class="price-brief">Full-service media takeover for maximum visibility and community-driven conversion.</p>
-        <ul class="price-features">
-          <li><i>✓</i> 20 strategic curated posts</li>
-          <li><i>✓</i> 12 high-yield cinematic reels</li>
-          <li><i>✓</i> Daily stories &amp; engagement management</li>
-          <li><i>✓</i> Full dedicated community management</li>
-          <li><i>✓</i> Monthly on-site content creation day</li>
-          <li><i>✓</i> In-depth competitor analytics research</li>
-          <li><i>✓</i> Custom scale &amp; growth blueprint strategy</li>
+    <div class="pr-grid">
+
+      <article class="pr-card reveal">
+        <div class="pr-top"><span class="pr-label">Social Media Services</span></div>
+        <p class="pr-from">Starting at</p>
+        <div class="pr-price"><span class="cur">$</span><span class="amt">100</span><span class="plus">+</span><span class="per">/ month</span></div>
+        <p class="pr-desc">Professional social media support tailored to each business, its goals and budget.</p>
+        <p class="pr-note">$100+ is the starting price. Your final investment depends on the number of deliverables and the scope of work.</p>
+        <ul class="pr-list">
+          <li><i>✓</i>Content creation and graphic design</li>
+          <li><i>✓</i>Strategic post scheduling</li>
+          <li><i>✓</i>Social media profile optimization</li>
+          <li><i>✓</i>Caption writing and hashtag research</li>
+          <li><i>✓</i>Customized service scope</li>
         </ul>
-        <a href="#quote" class="btn btn-primary btn-block">Get Started</a>
-      </div>
+        <a href="#quote" class="btn btn-secondary btn-caps pr-btn">Get Started <span aria-hidden="true">→</span></a>
+      </article>
 
-      <div class="price-card reveal">
-        <h3>Website Design</h3>
-        <div class="price-amount" style="font-size:26px;">Custom Architecture</div>
-        <p class="price-brief">Elite, hand-coded front-end builds optimized for lightning-fast client bookings.</p>
-        <div class="web-tier-stack">
-          <div class="web-tier-row">
-            <div><h4>Landing Page</h4><p>Sleek single-page conversion asset.</p></div>
-            <div class="web-tier-cost">$500+</div>
-          </div>
-          <div class="web-tier-row">
-            <div><h4>Business Website</h4><p>Multi-page elite brand authority hub.</p></div>
-            <div class="web-tier-cost">$1,000+</div>
-          </div>
-          <div class="web-tier-row">
-            <div><h4>E-Commerce Website</h4><p>Heavy-duty commercial inventory storefront.</p></div>
-            <div class="web-tier-cost">$1,500–$2,000+</div>
-          </div>
-        </div>
-        <a href="#quote" class="btn btn-secondary btn-block">Inquire About This Plan</a>
-      </div>
+      <article class="pr-card pr-card--premium reveal">
+        <div class="pr-top"><span class="pr-label">Premium Social</span><span class="pr-tag">Premium Tier</span></div>
+        <p class="pr-from">Starting at</p>
+        <div class="pr-price"><span class="cur">$</span><span class="amt">500</span><span class="plus">+</span><span class="per">/ month</span></div>
+        <p class="pr-desc">Full-service media management (content days, edited content and posting included) for maximum visibility, community-driven conversion and online growth for your business.</p>
+        <ul class="pr-list">
+          <li><i>✓</i>20 strategic curated posts / month</li>
+          <li><i>✓</i>12 high-yield cinematic reels / month</li>
+          <li><i>✓</i>Daily stories and engagement management</li>
+          <li><i>✓</i>Full dedicated community management</li>
+          <li><i>✓</i>Monthly on-site content creation day</li>
+          <li><i>✓</i>In-depth competitor analytics research</li>
+          <li><i>✓</i>Custom scale and growth blueprint strategy</li>
+        </ul>
+        <a href="#quote" class="btn btn-primary btn-caps pr-btn">Get Started <span aria-hidden="true">→</span></a>
+      </article>
 
     </div>
+
+    <article class="pr-card pr-web reveal">
+      <div class="pr-web-copy">
+        <div class="pr-top"><span class="pr-label">Website Design</span></div>
+        <h3>Custom Architecture</h3>
+        <p class="pr-desc">Elite, hand-coded websites designed to elevate your brand, strengthen credibility and convert visitors into customers.</p>
+        <p class="pr-fine">Website pricing depends on functionality, integrations, content and project scope.</p>
+        <a href="#quote" class="btn btn-secondary btn-caps pr-btn">Get Started <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="pr-tiers">
+        <div class="pr-tier">
+          <div><h4>Landing Page</h4><p>Sleek, single-page conversion-focused website.</p></div>
+          <div class="pr-tier-price">$250<b>+</b></div>
+        </div>
+        <div class="pr-tier">
+          <div><h4>Business Website</h4><p>Custom multi-page website and complete brand experience.</p></div>
+          <div class="pr-tier-price">$500</div>
+        </div>
+        <div class="pr-tier">
+          <div><h4>E-Commerce Website</h4><p>Custom online storefront, product catalog and shopping experience.</p></div>
+          <div class="pr-tier-price">$800<b>+</b></div>
+        </div>
+      </div>
+    </article>
+
+    <div class="budget reveal">
+      <div class="budget-copy">
+        <span class="eyebrow on-light"><span class="dot"></span>Flexible by Design</span>
+        <h3>Your Budget. Your Vision. Let&rsquo;s Make It Work.</h3>
+        <p>Great digital marketing shouldn&rsquo;t feel out of reach. Whether you&rsquo;re looking for a small social media refresh, help creating content, or a complete website transformation, I&rsquo;ll work with your budget to find a solution that makes sense for your business.</p>
+        <div class="budget-cta">
+          <strong>Not sure what you can afford? Let&rsquo;s talk.</strong>
+          <a href="#quote" class="btn btn-primary btn-caps">Let&rsquo;s Build a Plan <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div>
+        <ul class="budget-points">
+          <li>Flexible service options tailored to your budget.</li>
+          <li>Custom packages instead of one-size-fits-all pricing.</li>
+          <li>Start with what your business needs most.</li>
+          <li>Scale your services as your business grows.</li>
+          <li>No unnecessary expenses or services you don&rsquo;t need.</li>
+        </ul>
+        <p class="budget-note">Scope and deliverables are adjusted to find a realistic plan that works for both your business and mine.</p>
+      </div>
+    </div>
+
   </div>
 </section>
 
